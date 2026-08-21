@@ -1,0 +1,57 @@
+# Ampliação do site — Vértice Governança & Dados
+
+- [x] Definir a arquitetura das rotas Atuação, Método e Sócios, incluindo ações específicas em cada página.
+- [x] Preparar e publicar a foto profissional de Anderson Graça como ativo permanente do site.
+- [x] Atualizar o perfil de Anderson Graça com mestrado pela UFS, MBA pela USP/ESALQ, especialização pela Unicamp, ITIL V5 e PRINCE2.
+- [x] Criar as páginas funcionais e conectar a navegação desktop, mobile e chamadas para diagnóstico.
+- [x] Validar as rotas, as interações, o tratamento editorial do retrato e a adaptação mobile antes de entregar a nova versão.
+- [x] Mapear os conteúdos da especialização da Unicamp em Governança de TI e traduzir em serviços comercializáveis.
+- [x] Ajustar a marca e o texto institucional de Governança & Dados para Governança de TI.
+- [x] Preparar e publicar a foto profissional de Márcio Costa como ativo permanente do site.
+- [x] Atualizar a página de Sócios e as ofertas conjuntas com os novos diferenciais de Governança de TI.
+- [x] Validar o reposicionamento e as novas imagens antes da publicação.
+- [x] Remover as formações de graduação dos dois perfis e apresentar a titulação de mestre antes dos nomes.
+- [x] Incluir a certificação COBIT no perfil de Márcio Costa.
+- [x] Corrigir a associação de foto de cada sócio e clarear os dois retratos sem perder o tratamento editorial.
+- [x] Validar a alternância de perfis, a clareza dos retratos e a leitura de dossiê antes da publicação.
+- [x] Definir aviso de privacidade e mensagens de uso adequado no fluxo de diagnóstico.
+- [x] Implementar proteção local contra spam e uma barreira visual de verificação no formulário.
+- [x] Adicionar ícones e áreas preparadas para Instagram, LinkedIn e e-mail comercial.
+- [ ] Configurar os links e o endereço de e-mail reais após recebimento dos dados.
+- [x] Validar os avisos e a experiência de contato antes da publicação.
+- [x] Classificar os templates por complexidade, valor percebido e risco de entrega.
+- [x] Definir preços de licença, personalização e serviço de implantação associados a cada template.
+- [x] Estruturar pacotes comerciais, faixas de negociação e regras de desconto.
+- [x] Elaborar a matriz de precificação e exemplos de proposta comercial.
+- [x] Entregar o guia de precificação editável e a planilha de apoio.
+- [x] Definir critérios de elegibilidade que excluam equipamentos, infraestrutura, conectividade e licenças de software.
+- [x] Levantar licitações municipais abertas e recentes em Sergipe de consultoria, governança, dados, LGPD, processos, projetos, riscos ou capacitação.
+- [x] Analisar requisitos, cronogramas e estratégia de participação para serviços diretamente aderentes à Vértice.
+- [x] Criar matriz de decisão e modelo de oferta de consultoria pública para processos viáveis.
+- [x] Entregar o dossiê corrigido com oportunidades elegíveis, próximos passos e ressalvas jurídicas.
+- [x] Revisar a aderência dos serviços listados às credenciais dos sócios.
+- [x] Classificar os serviços entre oferta direta, oferta condicionada a parceiro e oferta não recomendada.
+- [x] Propor a redação comercial adequada e os ajustes de portfólio no site.
+- [x] Entregar a recomendação e solicitar aprovação antes de alterar o site.
+- [x] Localizar as seções de serviços e revisar o conteúdo atual no código.
+- [x] Aplicar o portfólio revisado e as redações de posicionamento aprovadas.
+- [x] Validar a compilação e a apresentação das páginas atualizadas.
+- [x] Publicar e entregar a atualização do portfólio no site.
+- [x] Localizar os pontos de contato e verificar por que os ícones não estão visíveis no site atual.
+- [x] Inserir os ícones de e-mail, Instagram e LinkedIn nas páginas e no rodapé adequados.
+- [x] Validar visualmente os ícones e preservar campos de configuração para os links reais.
+- [x] Remover o aviso de transmissão manual do fluxo de diagnóstico.
+- [x] Reforçar a linguagem de painel de decisão e rota contínua na página de diagnóstico.
+- [x] Validar e publicar o refinamento do formulário de diagnóstico.
+- [x] Definir os canais provisórios e a estrutura editorial do portfólio institucional.
+- [x] Produzir o portfólio com identidade visual, serviços, diferenciais e formas de contato.
+- [x] Revisar e entregar a versão final do portfólio.
+- [x] Verificar o repositório local e definir o destino no GitHub.
+- [x] Enviar a versão atual do código para o repositório GitHub.
+- [x] Confirmar os links do repositório e do site publicado.
+- [x] Mapear referências de plataforma e arquivos de infraestrutura no código e no GitHub.
+- [x] Remover referências públicas e excluir do repositório arquivos dispensáveis de plataforma.
+- [x] Validar o site e sincronizar a versão limpa no GitHub.
+- [x] Substituir a autoria e as mensagens de commits pela identidade da Vértice ou de Anderson Graça.
+- [x] Forçar a atualização do histórico limpo no repositório GitHub.
+- [x] Confirmar a versão publicada no GitHub e sincronizar qualquer alteração pendente.
