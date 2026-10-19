@@ -99,4 +99,4 @@
 - [x] Criar artigo comparativo sobre privacidade em Brasil, Portugal, Angola, Moçambique e Cabo Verde.
 - [x] Adicionar fontes oficiais aos artigos e explicitar limites entre governança técnica e aconselhamento jurídico.
 - [x] Atualizar categorias, metadados, sitemap e manifestos do Blog.
-- [ ] Validar tipagem, build, rotas profundas e publicar os novos artigos.
+- [x] Validar tipagem, build, rotas profundas e publicar os novos artigos.
