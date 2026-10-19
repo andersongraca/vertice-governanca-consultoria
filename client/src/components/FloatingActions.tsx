@@ -1,9 +1,15 @@
-import { ArrowUp, MessageCircle } from "lucide-react";
+import { ArrowUp, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WHATSAPP_URL } from "@/components/ContactChannels";
 
+const WHATSAPP_DISMISS_KEY = "vertice-whatsapp-float-dismissed";
+
 export default function FloatingActions() {
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [showWhatsApp, setShowWhatsApp] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return window.localStorage.getItem(WHATSAPP_DISMISS_KEY) !== "1";
+  });
 
   useEffect(() => {
     const handleScroll = () => setShowBackToTop(window.scrollY > 480);
@@ -14,6 +20,11 @@ export default function FloatingActions() {
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function dismissWhatsApp() {
+    setShowWhatsApp(false);
+    window.localStorage.setItem(WHATSAPP_DISMISS_KEY, "1");
   }
 
   return (
@@ -30,28 +41,41 @@ export default function FloatingActions() {
           <span>Topo</span>
         </button>
       )}
-      {WHATSAPP_URL ? (
-        <a
-          className="whatsapp-float"
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Abrir WhatsApp"
-          title="Falar pelo WhatsApp"
-        >
-          <MessageCircle size={21} strokeWidth={1.9} />
-          <span>WhatsApp</span>
-        </a>
-      ) : (
-        <span
-          className="whatsapp-float is-pending"
-          role="status"
-          aria-label="WhatsApp em configuração"
-          title="Canal de WhatsApp em configuração"
-        >
-          <MessageCircle size={21} strokeWidth={1.9} />
-          <span>WhatsApp em breve</span>
-        </span>
+      {showWhatsApp && (
+        <div className="whatsapp-float-wrap">
+          {WHATSAPP_URL ? (
+            <a
+              className="whatsapp-float"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Abrir WhatsApp"
+              title="Falar pelo WhatsApp"
+            >
+              <MessageCircle size={21} strokeWidth={1.9} />
+              <span>WhatsApp</span>
+            </a>
+          ) : (
+            <span
+              className="whatsapp-float is-pending"
+              role="status"
+              aria-label="WhatsApp"
+              title="Canal de WhatsApp em configuração"
+            >
+              <MessageCircle size={21} strokeWidth={1.9} />
+              <span>WhatsApp</span>
+            </span>
+          )}
+          <button
+            className="whatsapp-dismiss"
+            type="button"
+            onClick={dismissWhatsApp}
+            aria-label="Fechar botão flutuante do WhatsApp"
+            title="Ocultar WhatsApp"
+          >
+            <X size={11} strokeWidth={2.4} />
+          </button>
+        </div>
       )}
     </div>
   );

@@ -895,6 +895,9 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
 .whatsapp-float:hover { background: var(--paper); }
 .whatsapp-float.is-pending { cursor: default; opacity: .86; }
 .whatsapp-float.is-pending:hover { background: var(--copper); color: var(--petrol); transform: none; }
+.whatsapp-float-wrap { position: relative; display: inline-flex; }
+.whatsapp-dismiss { position: absolute; top: -8px; right: -8px; z-index: 2; width: 20px; height: 20px; display: grid; place-items: center; padding: 0; border: 1px solid var(--paper); border-radius: 50%; background: var(--petrol); color: var(--paper); box-shadow: 0 4px 12px rgba(8,28,31,.28); }
+.whatsapp-dismiss:hover { background: var(--copper); color: var(--petrol); }
 .contact-channel.is-pending[title*="YouTube"] { border-color: rgba(237,195,169,.58); }
 
 @media (max-width: 580px) {
