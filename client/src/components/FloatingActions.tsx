@@ -2,14 +2,24 @@ import { ArrowUp, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WHATSAPP_URL } from "@/components/ContactChannels";
 
-const WHATSAPP_DISMISS_KEY = "vertice-whatsapp-float-dismissed";
+const WHATSAPP_DISMISS_KEY = "vertice-whatsapp-float-dismissed-v2";
+
+function wasWhatsAppDismissed() {
+  try {
+    return (
+      typeof window !== "undefined" &&
+      window.localStorage.getItem(WHATSAPP_DISMISS_KEY) === "1"
+    );
+  } catch {
+    return false;
+  }
+}
 
 export default function FloatingActions() {
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [showWhatsApp, setShowWhatsApp] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return window.localStorage.getItem(WHATSAPP_DISMISS_KEY) !== "1";
-  });
+  const [showWhatsApp, setShowWhatsApp] = useState(
+    () => !wasWhatsAppDismissed()
+  );
 
   useEffect(() => {
     const handleScroll = () => setShowBackToTop(window.scrollY > 480);
@@ -24,7 +34,11 @@ export default function FloatingActions() {
 
   function dismissWhatsApp() {
     setShowWhatsApp(false);
-    window.localStorage.setItem(WHATSAPP_DISMISS_KEY, "1");
+    try {
+      window.localStorage.setItem(WHATSAPP_DISMISS_KEY, "1");
+    } catch {
+      // O fechamento continua válido durante a sessão mesmo se o navegador bloquear o storage.
+    }
   }
 
   return (
