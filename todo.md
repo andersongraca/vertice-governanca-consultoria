@@ -56,11 +56,20 @@
 - [x] Forçar a atualização do histórico limpo no repositório GitHub.
 - [x] Confirmar a versão publicada no GitHub e sincronizar qualquer alteração pendente.
 
-
 ## Entrega — Blog e Serviços por especialização
+
 - [x] Criar a navegação pública Serviços e Blog, preservando o alias Atuação e os acessos existentes.
 - [x] Estruturar as nove frentes de Serviços: Gestão de Serviços; Gestão de Projetos em TI; alinhamento estratégico de negócio e TIC; Gestão do Conhecimento; Segurança e Confiabilidade; Gestão de Dados; Aquisições e Contratos; Arquitetura Organizacional; Governança e implementação ISO/IEC 27001 e 27701.
 - [x] Criar o hub editorial do Blog com filtros por tema e conteúdos iniciais relacionados às áreas de especialização.
 - [x] Criar páginas individuais de artigos com links internos, CTA para diagnóstico e metadados de compartilhamento.
 - [x] Atualizar manifestos de rotas, sitemap e robots para a publicação pública.
 - [x] Validar tipagem, build, rotas e publicação no GitHub Pages.
+
+## Expansão — Proteção de Dados Lusófona
+
+- [x] Pesquisar referências de mercado no Brasil e em Portugal para robustecer arquitetura de serviços, provas, conteúdo e CTAs.
+- [x] Verificar fontes primárias da LGPD, RGPD/Lei nº 58/2019, Lei angolana nº 22/11, quadro vigente de Moçambique e regime cabo-verdiano.
+- [x] Criar a décima frente de Serviços: Governança de Privacidade e Dados para operações lusófonas.
+- [x] Criar o mapa comparativo `/protecao-dados` com status jurídico, autoridades, escopo, transferências, limites e fontes oficiais.
+- [x] Criar conteúdo editorial do Blog sobre proteção de dados lusófona e conectar a nova frente ao diagnóstico.
+- [ ] Validar tipagem, build, rotas profundas e republicar o site com a nova trilha regulatória.

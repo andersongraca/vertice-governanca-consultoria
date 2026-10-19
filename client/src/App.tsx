@@ -12,6 +12,7 @@ import Diagnostico from "./pages/Diagnostico";
 import Home from "./pages/Home";
 import Metodo from "./pages/Metodo";
 import Privacidade from "./pages/Privacidade";
+import ProtecaoDados from "./pages/ProtecaoDados";
 import Services from "./pages/Services";
 import Socios from "./pages/Socios";
 
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/metodo" component={Metodo} />
       <Route path="/socios" component={Socios} />
       <Route path="/diagnostico" component={Diagnostico} />
+      <Route path="/protecao-dados" component={ProtecaoDados} />
       <Route path="/privacidade" component={Privacidade} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

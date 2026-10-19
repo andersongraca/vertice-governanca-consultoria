@@ -5,6 +5,7 @@ import {
   ClipboardCheck,
   Database,
   FileText,
+  Globe,
   Layers3,
   Network,
   ShieldCheck,
@@ -183,6 +184,25 @@ export const serviceCatalog: ServiceItem[] = [
     icon: BadgeCheck,
     notice:
       "A Vértice apoia a governança e a implementação. Certificação e auditoria independente devem ser conduzidas por organismo competente e independente.",
+  },
+  {
+    id: "privacidade-dados-lusofona",
+    number: "10",
+    short: "Privacidade Lusófona",
+    eyebrow: "Dados, países e responsabilidade",
+    title: "Governança de Privacidade e Dados para operações lusófonas.",
+    description:
+      "Organizamos inventário, fluxos, papéis, contratos, riscos, transferências e evidências para operações que tratam dados no Brasil, Portugal, Angola, Moçambique e Cabo Verde.",
+    outcome:
+      "Uma base técnica verificável para que a organização tome decisões de privacidade com contexto jurídico e operacional.",
+    deliverables: [
+      "Mapa de jurisdições, dados, fluxos e terceiros",
+      "Matriz de riscos, contratos, direitos e evidências",
+      "Trilha de implementação, capacitação e revisão regulatória",
+    ],
+    icon: Globe,
+    notice:
+      "A Vértice presta apoio técnico de governança. Interpretação jurídica, pareceres, notificações formais e representação perante autoridades devem ser validados por profissional habilitado na jurisdição aplicável.",
   },
 ];
 

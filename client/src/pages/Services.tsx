@@ -1,13 +1,28 @@
 /** DESIGN — O portfólio é uma matriz de escolhas: cada frente revela o nível de decisão que a Vértice ajuda a organizar. */
 import { ArrowRight, Check, ShieldCheck, Sparkles } from "lucide-react";
-import { useState } from "react";
-import { Link } from "wouter";
+import { useEffect, useState } from "react";
+import { Link, useSearch } from "wouter";
 import PageMeta from "@/components/PageMeta";
 import SiteChrome from "@/components/SiteChrome";
 import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
 export default function Services() {
-  const [activeId, setActiveId] = useState(serviceCatalog[0].id);
+  const search = useSearch();
+  const requestedService = new URLSearchParams(search).get("service");
+  const initialServiceId =
+    requestedService &&
+    serviceCatalog.some(service => service.id === requestedService)
+      ? requestedService
+      : serviceCatalog[0].id;
+  const [activeId, setActiveId] = useState(initialServiceId);
+  useEffect(() => {
+    if (
+      requestedService &&
+      serviceCatalog.some(service => service.id === requestedService)
+    ) {
+      setActiveId(requestedService);
+    }
+  }, [requestedService]);
   const service = getServiceById(activeId);
   const Icon = service.icon;
 
@@ -15,7 +30,7 @@ export default function Services() {
     <SiteChrome active="servicos">
       <PageMeta
         title="Serviços | Vértice Governança de TI"
-        description="Conheça as frentes de consultoria da Vértice em serviços, projetos, alinhamento estratégico, conhecimento, segurança, dados, contratos, arquitetura organizacional e ISO/IEC 27001 e 27701."
+        description="Conheça as frentes de consultoria da Vértice em serviços, projetos, alinhamento estratégico, conhecimento, segurança, dados, contratos, arquitetura organizacional, privacidade lusófona e ISO/IEC 27001 e 27701."
         path="/servicos"
       />
       <section className="route-hero route-hero-light services-route-hero">
@@ -43,7 +58,7 @@ export default function Services() {
         <div className="services-intro-grid">
           <div>
             <div className="eyebrow">
-              <span /> Nove frentes conectadas
+              <span /> Dez frentes conectadas
             </div>
             <h2>
               O serviço muda.
@@ -145,6 +160,14 @@ export default function Services() {
             >
               Conversar sobre esta frente <ArrowRight size={17} />
             </Link>
+            {service.id === "privacidade-dados-lusofona" && (
+              <Link
+                className="route-secondary-button services-privacy-link"
+                href="/protecao-dados"
+              >
+                Ver mapa de jurisdições <ArrowRight size={16} />
+              </Link>
+            )}
           </article>
         </div>
         <aside

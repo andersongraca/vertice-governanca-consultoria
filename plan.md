@@ -18,13 +18,15 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 
 ## Arquitetura de implementação
 
-- `client/src/lib/serviceCatalog.ts`: catálogo único das nove frentes, com título, descrição, entregáveis, resultado esperado, ícone e observações de escopo.
-- `client/src/lib/blogPosts.ts`: catálogo editorial dos artigos iniciais, com slug, categoria, resumo, tempo de leitura, data editorial e conteúdo estruturado em blocos.
+- `client/src/lib/serviceCatalog.ts`: catálogo único das dez frentes, incluindo Governança de Privacidade e Dados para operações lusófonas, com título, descrição, entregáveis, resultado esperado, ícone e observações de escopo.
+- `client/src/lib/blogPosts.ts`: catálogo editorial dos artigos iniciais, incluindo a trilha de Privacidade, com slug, categoria, resumo, tempo de leitura, data editorial e conteúdo estruturado em blocos.
+- `client/src/lib/dataProtection.ts`: catálogo comparável de Brasil, Portugal, Angola, Moçambique e Cabo Verde, com status do marco, autoridade, escopo, pontos de governança, transferências, limites, apoio técnico e fontes primárias.
 - `client/src/components/PageMeta.tsx`: metadados de rota no cliente (título, descrição, canonical, Open Graph e Twitter Card) para Serviços, Blog e artigos.
 - `client/src/pages/Services.tsx`: nova rota `/servicos`, com navegação lateral/interativa entre as frentes, seção de método de atuação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
 - `client/src/pages/BlogPost.tsx`: rota `/blog/:slug`, com leitura individual, índice visual, blocos editoriais e links para outros artigos/diagnóstico.
-- `client/src/components/SiteChrome.tsx` e `client/src/pages/Home.tsx`: navegação atualizada para Serviços e Blog, mantendo o acesso às páginas existentes.
+- `client/src/pages/ProtecaoDados.tsx`: página `/protecao-dados` com mapa comparativo de jurisdições, aviso de limites profissionais, fontes oficiais e CTA para diagnóstico técnico.
+- `client/src/components/SiteChrome.tsx` e `client/src/pages/Home.tsx`: navegação atualizada para Serviços, Blog e Proteção de Dados, mantendo o acesso às páginas existentes.
 - `client/src/App.tsx`: manifestação das novas rotas estáticas e da rota dinâmica de artigos.
 - `client/public/manus-routes.json`: declaração de rotas públicas para a camada de publicação/descoberta.
 - `client/public/sitemap.xml` e `client/public/robots.txt`: documentos básicos de descoberta para a publicação no domínio GitHub Pages.
@@ -35,7 +37,8 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - Os textos posicionam a Vértice como consultoria técnica e gerencial em governança, tecnologia, dados, processos e projetos.
 - A redação não promete operação de infraestrutura, desenvolvimento de sistemas ou certificação independente.
 - Para ISO/IEC 27001 e 27701, a oferta é descrita como governança, diagnóstico de lacunas, estruturação de controles, documentação, evidências e preparação para auditoria; a certificação/auditoria permanece responsabilidade de organismo independente competente.
-- Para temas de privacidade e LGPD, o escopo é técnico-operacional e a interface jurídica continua explicitamente condicionada à atuação de profissional habilitado.
+- Para temas de privacidade, LGPD e proteção de dados lusófona, o escopo é técnico-operacional e a interface jurídica continua explicitamente condicionada à atuação de profissional habilitado na jurisdição aplicável.
+- A comunicação separa direito vigente, ato vinculante, orientação oficial, recomendação técnica e proposta não confirmada. Moçambique é apresentado como quadro fragmentado e em monitorização legislativa, sem importar a proposta de lei como requisito atual.
 - Os artigos serão evergreen, educativos e orientados a decisão, sem inventar cases, clientes ou métricas.
 
 ## Direção de design
@@ -54,10 +57,11 @@ O site já possui o movimento visual **Horizonte de Controle**, portanto a nova 
 ## Rotas públicas
 
 - `/` — página institucional existente.
-- `/servicos` — portfólio completo das nove frentes.
+- `/servicos` — portfólio completo das dez frentes.
 - `/atuacao` — alias retrocompatível para `/servicos`.
 - `/blog` — hub editorial.
 - `/blog/:slug` — artigo individual.
+- `/protecao-dados` — mapa comparativo de proteção de dados lusófona.
 - `/metodo`, `/socios`, `/diagnostico`, `/privacidade` — páginas existentes preservadas.
 
 ## Entrega e publicação

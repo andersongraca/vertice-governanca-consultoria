@@ -722,3 +722,92 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
   .article-next-step .primary-cta { grid-column: auto; }
   .article-related-grid { grid-template-columns: 1fr; }
 }
+
+
+/* DESIGN — Proteção de dados lusófona: mapa de jurisdição, evidência e responsabilidade. */
+.services-privacy-link { margin-top: 17px; }
+.privacy-data-hero h1 { max-width: 760px; }
+.privacy-data-main { background: var(--paper); }
+.privacy-data-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 9vw; padding: 106px 8vw 91px; position: relative; }
+.privacy-data-intro::before, .privacy-jurisdictions-section::before { content: ""; position: absolute; left: 4.3vw; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, rgba(12,41,45,.16) 12%, rgba(12,41,45,.16) 88%, transparent); pointer-events: none; }
+.privacy-data-intro h2 { margin: 18px 0 0; max-width: 580px; font-size: clamp(3rem, 4.7vw, 5.2rem); line-height: .94; }
+.privacy-data-intro-copy { align-self: end; max-width: 570px; }
+.privacy-data-intro-copy > p { margin: 0 0 27px; color: var(--ink-soft); font-size: 15px; line-height: 1.78; }
+.privacy-data-disclaimer { display: flex; align-items: flex-start; gap: 12px; padding: 18px 18px 17px; border-left: 2px solid var(--copper); background: rgba(211,99,59,.08); color: var(--ink-soft); }
+.privacy-data-disclaimer svg { flex: 0 0 auto; color: var(--copper); margin-top: 1px; }
+.privacy-data-disclaimer p { margin: 0; font-size: 11px; line-height: 1.6; }
+.privacy-support-section { padding: 0 8vw 106px; }
+.privacy-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 45px; }
+.privacy-section-heading > p { max-width: 430px; margin: 0 0 3px; color: var(--ink-soft); font-size: 13px; line-height: 1.7; }
+.privacy-support-grid { margin-top: 41px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.privacy-support-grid article { min-height: 190px; padding: 25px 27px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(244,241,233,.56); }
+.privacy-support-grid span { color: var(--copper); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+.privacy-support-grid strong { display: block; margin: 36px 0 10px; font-family: "DM Serif Display", serif; font-size: 28px; font-weight: 400; }
+.privacy-support-grid p { max-width: 315px; margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.65; }
+.privacy-jurisdictions-section { padding: 104px 8vw 112px; background: var(--paper-deep); position: relative; }
+.privacy-jurisdictions-heading h2 { margin: 17px 0 0; font-size: clamp(3rem, 4.5vw, 5rem); line-height: .94; }
+.privacy-jurisdiction-index { margin: 52px 0 32px; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.privacy-jurisdiction-index a { min-height: 77px; padding: 16px 17px; display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; font-weight: 800; line-height: 1.2; transition: background 180ms var(--ease-out), color 180ms var(--ease-out); }
+.privacy-jurisdiction-index a:hover { background: var(--petrol); color: var(--paper); }
+.privacy-jurisdiction-index a span { color: var(--copper); font-size: 10px; letter-spacing: .08em; }
+.privacy-jurisdiction-index a svg { margin-left: auto; flex: 0 0 auto; }
+.privacy-jurisdiction-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.privacy-jurisdiction-card { padding: 31px 30px 29px; background: var(--paper); border-top: 2px solid var(--petrol); scroll-margin-top: 95px; }
+.privacy-jurisdiction-card header { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.privacy-jurisdiction-code { display: flex; align-items: center; gap: 12px; }
+.privacy-jurisdiction-code > span { width: 36px; height: 36px; display: grid; place-items: center; background: var(--petrol); color: var(--copper-pale); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.privacy-jurisdiction-code strong { font-family: "DM Serif Display", serif; font-size: 28px; font-weight: 400; line-height: 1; }
+.privacy-status { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-soft); font-size: 9px; font-weight: 800; line-height: 1.2; text-align: right; text-transform: uppercase; letter-spacing: .06em; }
+.privacy-status i { width: 7px; height: 7px; display: inline-block; border-radius: 50%; background: #4d9274; }
+.privacy-status-watch i { background: var(--copper); }
+.privacy-jurisdiction-label { margin: 20px 0 12px; color: var(--copper); text-transform: uppercase; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.privacy-authority { padding: 11px 0 13px; display: flex; align-items: flex-start; gap: 8px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--ink); font-size: 10px; font-weight: 800; line-height: 1.45; }
+.privacy-authority svg { flex: 0 0 auto; color: var(--copper); margin-top: 1px; }
+.privacy-card-scope { margin: 18px 0 20px; color: var(--ink-soft); font-size: 12px; line-height: 1.67; }
+.privacy-card-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.privacy-card-heading { display: block; color: var(--copper); text-transform: uppercase; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.privacy-card-columns ul, .privacy-card-support ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 9px; }
+.privacy-card-columns li, .privacy-card-support li { position: relative; padding-left: 13px; color: var(--ink-soft); font-size: 11px; line-height: 1.52; }
+.privacy-card-columns li::before, .privacy-card-support li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 1px; background: var(--copper); }
+.privacy-card-columns p { margin: 14px 0 0; color: var(--ink-soft); font-size: 11px; line-height: 1.6; }
+.privacy-card-support { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.privacy-card-caution { margin-top: 23px; padding: 13px 14px; display: flex; align-items: flex-start; gap: 8px; background: rgba(211,99,59,.08); color: var(--ink-soft); }
+.privacy-card-caution svg { flex: 0 0 auto; color: var(--copper); margin-top: 1px; }
+.privacy-card-caution p { margin: 0; font-size: 10px; line-height: 1.55; }
+.privacy-jurisdiction-card footer { margin-top: 21px; padding-top: 18px; border-top: 1px solid var(--line); }
+.privacy-jurisdiction-card footer > span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); text-transform: uppercase; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.privacy-jurisdiction-card footer > span svg { color: var(--copper); }
+.privacy-jurisdiction-card footer > div { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 9px 17px; }
+.privacy-jurisdiction-card footer a { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-soft); border-bottom: 1px solid var(--copper); padding-bottom: 4px; text-decoration: none; font-size: 9px; line-height: 1.35; }
+.privacy-jurisdiction-card footer a:hover { color: var(--copper); }
+.privacy-review-note { margin: 0 8vw; padding: 19px 0 26px; display: flex; align-items: flex-start; gap: 10px; color: var(--ink-soft); border-top: 1px solid var(--line); }
+.privacy-review-note svg { flex: 0 0 auto; color: var(--copper); margin-top: 1px; }
+.privacy-review-note p { max-width: 720px; margin: 0; font-size: 10px; line-height: 1.6; }
+.privacy-review-note strong { color: var(--ink); }
+.privacy-data-callout { border-top: 1px solid rgba(244,241,233,.1); }
+
+@media (max-width: 900px) {
+  .privacy-data-intro { grid-template-columns: 1fr; gap: 31px; }
+  .privacy-data-intro-copy { max-width: 650px; }
+  .privacy-section-heading { align-items: start; flex-direction: column; gap: 20px; }
+  .privacy-support-grid { grid-template-columns: 1fr 1fr; }
+  .privacy-jurisdiction-index { grid-template-columns: repeat(3, 1fr); }
+  .privacy-jurisdiction-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 580px) {
+  .privacy-data-intro, .privacy-support-section, .privacy-jurisdictions-section { padding-left: 7vw; padding-right: 7vw; }
+  .privacy-data-intro { padding-top: 69px; padding-bottom: 70px; }
+  .privacy-support-section { padding-bottom: 73px; }
+  .privacy-support-grid { grid-template-columns: 1fr; margin-top: 31px; }
+  .privacy-support-grid article { min-height: 150px; }
+  .privacy-support-grid strong { margin-top: 24px; }
+  .privacy-jurisdictions-section { padding-top: 72px; padding-bottom: 76px; }
+  .privacy-jurisdiction-index { grid-template-columns: 1fr 1fr; margin-top: 35px; }
+  .privacy-jurisdiction-index a { min-height: 63px; padding: 12px 11px; font-size: 10px; }
+  .privacy-jurisdiction-card { padding: 24px 20px; }
+  .privacy-jurisdiction-card header { flex-direction: column; }
+  .privacy-status { text-align: left; }
+  .privacy-card-columns { grid-template-columns: 1fr; gap: 20px; }
+  .privacy-review-note { margin: 0 7vw; }
+}

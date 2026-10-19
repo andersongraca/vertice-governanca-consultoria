@@ -76,7 +76,7 @@ export default function BlogPost() {
             <span>
               <Clock3 size={14} /> {post.readTime}
             </span>
-            <Link href={`/servicos#${service.id}`}>
+            <Link href={`/servicos?service=${encodeURIComponent(service.id)}`}>
               Frente relacionada <ArrowRight size={15} />
             </Link>
           </div>

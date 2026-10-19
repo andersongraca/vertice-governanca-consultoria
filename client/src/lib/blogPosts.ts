@@ -26,6 +26,7 @@ export const blogCategories = [
   "Segurança",
   "Dados",
   "Conformidade",
+  "Privacidade",
 ];
 
 export const blogPosts: BlogPost[] = [
@@ -262,6 +263,53 @@ export const blogPosts: BlogPost[] = [
           "priorizar poucos avanços com efeito observável",
           "revisar a arquitetura quando a estratégia ou a operação mudarem",
         ],
+      },
+    ],
+  },
+  {
+    slug: "protecao-de-dados-lusofona-governanca-antes-da-promessa",
+    number: "08",
+    category: "Privacidade",
+    title: "Proteção de dados lusófona: governança antes da promessa.",
+    excerpt:
+      "LGPD, RGPD, Angola, Moçambique e Cabo Verde não formam uma regra única. O primeiro trabalho é tornar visíveis os fluxos, as responsabilidades e as fontes que sustentam cada decisão.",
+    readTime: "8 min de leitura",
+    publishedAt: "19 out 2026",
+    serviceId: "privacidade-dados-lusofona",
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Falar português não significa operar sob a mesma regra de proteção de dados. Uma organização pode ter sede em um país, usuários em outro, uma nuvem em uma terceira região e fornecedores que acessam dados a partir de vários lugares. A governança começa quando esse desenho deixa de ser presumido e passa a ser documentado.",
+      },
+      {
+        type: "heading",
+        text: "O mesmo idioma não cria o mesmo requisito",
+      },
+      {
+        type: "list",
+        items: [
+          "No Brasil, a LGPD e a regulamentação da ANPD estruturam princípios, bases, direitos, segurança, incidentes e transferências.",
+          "Em Portugal, RGPD e Lei nº 58/2019 convivem com a atuação da CNPD e com o capítulo europeu de transferências internacionais.",
+          "Em Angola, a Lei nº 22/11 e a APD tratam de notificações, autorizações, segurança, representantes e transferências.",
+          "Em Moçambique, é preciso separar o quadro vigente, os regimes setoriais e a proposta legislativa em monitorização.",
+          "Em Cabo Verde, o regime geral e a CNPD possuem regras próprias de notificação, autorização, direitos, segurança e transferências.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "A disciplina que atravessa as jurisdições",
+      },
+      {
+        type: "paragraph",
+        text: "A camada técnica comum não é uma lista universal de obrigações. É uma forma de organizar fatos para que a decisão seja tomada no contexto correto: inventário de tratamentos, mapa de fluxos, papéis, finalidades, retenção, terceiros, cloud, backups, transferências, incidentes, direitos, controles e evidências.",
+      },
+      {
+        type: "quote",
+        text: "Antes de perguntar se a organização está em conformidade, é preciso conseguir explicar onde o dado está, por que circula e quem responde por ele.",
+      },
+      {
+        type: "paragraph",
+        text: "A Vértice pode organizar essa base de governança, apoiar políticas, contratos, matrizes, capacitação e preparação para auditorias. Pareceres, interpretação jurídica, notificações formais e representação perante autoridades permanecem responsabilidades do cliente e de profissionais habilitados na jurisdição aplicável.",
       },
     ],
   },
