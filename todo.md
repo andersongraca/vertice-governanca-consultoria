@@ -115,6 +115,6 @@
 
 - [x] Padronizar cabeçalho e rodapé como “Consultoria e Governança em TI”.
 - [x] Adicionar botão global de voltar ao topo.
-- [x] Adicionar botão flutuante de WhatsApp com rótulo direto e X pequeno para ocultação persistente, sem URL inventada.
+- [x] Adicionar botão flutuante de WhatsApp com rótulo direto, X pequeno e link oficial para +55 79 98843-863.
 - [x] Adicionar YouTube ao rodapé em estado “em configuração”, sem canal oficial publicado.
 - [x] Validar e publicar a nova interface no GitHub Pages.

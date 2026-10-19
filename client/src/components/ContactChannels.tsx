@@ -6,7 +6,7 @@ export const CONTACT_EMAIL = "";
 export const INSTAGRAM_URL = "";
 export const LINKEDIN_URL = "";
 export const YOUTUBE_URL = "";
-export const WHATSAPP_URL = "";
+export const WHATSAPP_URL = "https://wa.me/557998843863";
 
 const channels = [
   { label: "E-mail", href: CONTACT_EMAIL, icon: Mail },
