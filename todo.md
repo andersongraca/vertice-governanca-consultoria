@@ -90,3 +90,13 @@
 - [x] Identificar capacidades complementares: estratégia e investimentos; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
 - [x] Registrar limites de oferta para Direito Digital, ESG amplo, desenvolvimento, infraestrutura, segurança ofensiva, perícia, auditoria e certificação independente.
 - [x] Atualizar Home, cabeçalho e página de Serviços com o novo posicionamento e validar a publicação.
+
+
+## Entrega — Trilha editorial ITIL v5, IA e Privacidade Lusófona
+
+- [x] Criar artigo sobre a arquitetura comum entre ITIL Version 5, ISO/IEC 42001 e LGPD/RGPD.
+- [x] Criar artigo sobre operação de serviços digitais com IA, evidências e melhoria contínua.
+- [x] Criar artigo comparativo sobre privacidade em Brasil, Portugal, Angola, Moçambique e Cabo Verde.
+- [x] Adicionar fontes oficiais aos artigos e explicitar limites entre governança técnica e aconselhamento jurídico.
+- [x] Atualizar categorias, metadados, sitemap e manifestos do Blog.
+- [ ] Validar tipagem, build, rotas profundas e publicar os novos artigos.

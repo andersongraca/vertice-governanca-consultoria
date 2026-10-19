@@ -150,6 +150,20 @@ export default function BlogPost() {
               partida para uma conversa com sua equipe.
             </p>
           </div>
+          {post.sources && post.sources.length > 0 && (
+            <div className="article-sources">
+              <span>Fontes oficiais consultadas</span>
+              <ul>
+                {post.sources.map(source => (
+                  <li key={source.href}>
+                    <a href={source.href} target="_blank" rel="noreferrer">
+                      {source.label} <ArrowRight size={13} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </article>
       </main>
 

@@ -877,3 +877,12 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
   .consulting-capabilities-grid article { min-height: 185px; }
   .consulting-capabilities-grid strong { margin-top: 23px; }
 }
+
+/* DESIGN — Fontes: transparência editorial para temas regulatórios e técnicos. */
+.article-sources { margin-top: 34px; padding-top: 19px; border-top: 1px solid var(--line); }
+.article-sources > span { color: var(--copper); font-size: 9px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.article-sources ul { margin: 14px 0 0; display: grid; gap: 8px; }
+.article-body .article-sources li { display: block; font-size: 11px; }
+.article-sources a { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(211,99,59,.48); padding-bottom: 3px; }
+.article-sources a:hover { color: var(--copper); }
+.article-sources a svg { color: var(--copper); }

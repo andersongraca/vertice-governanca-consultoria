@@ -20,8 +20,8 @@ export default function Blog() {
   return (
     <SiteChrome active="blog">
       <PageMeta
-        title="Blog | Vértice Governança de TI"
-        description="Artigos da Vértice sobre governança de TI, projetos, processos, conhecimento, segurança, dados, contratos e implementação ISO/IEC 27001 e 27701."
+        title="Blog | Vértice Consultoria em TI"
+        description="Artigos da Vértice sobre consultoria em TI, ITIL Version 5, governança de IA, ISO/IEC 42001, LGPD, privacidade e operações em países de língua portuguesa."
         path="/blog"
       />
       <section className="route-hero route-hero-dark blog-route-hero">

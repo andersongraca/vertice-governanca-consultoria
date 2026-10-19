@@ -1,23 +1,23 @@
 {
   "routes": [
-    { "path": "/", "title": "Vértice Governança de TI" },
-    { "path": "/servicos", "title": "Serviços | Vértice Governança de TI" },
-    { "path": "/atuacao", "title": "Serviços | Vértice Governança de TI" },
-    { "path": "/blog", "title": "Blog | Vértice Governança de TI" },
-    { "path": "/blog/:slug", "title": "Artigo | Vértice Governança de TI" },
-    { "path": "/metodo", "title": "Método | Vértice Governança de TI" },
-    { "path": "/socios", "title": "Quem somos | Vértice Governança de TI" },
+    { "path": "/", "title": "Vértice Consultoria em TI, Governança e Gestão" },
+    { "path": "/servicos", "title": "Consultoria em TI e Serviços | Vértice" },
+    { "path": "/atuacao", "title": "Consultoria em TI e Serviços | Vértice" },
+    { "path": "/blog", "title": "Blog | Vértice Consultoria em TI" },
+    { "path": "/blog/:slug", "title": "Artigo | Vértice Consultoria em TI" },
+    { "path": "/metodo", "title": "Método | Vértice Consultoria em TI" },
+    { "path": "/socios", "title": "Quem somos | Vértice Consultoria em TI" },
     {
       "path": "/diagnostico",
-      "title": "Diagnóstico executivo | Vértice Governança de TI"
+      "title": "Diagnóstico executivo | Vértice Consultoria em TI"
     },
     {
       "path": "/protecao-dados",
-      "title": "Proteção de Dados Lusófona | Vértice Governança de TI"
+      "title": "Proteção de Dados Lusófona | Vértice Consultoria em TI"
     },
     {
       "path": "/privacidade",
-      "title": "Privacidade | Vértice Governança de TI"
+      "title": "Privacidade | Vértice Consultoria em TI"
     }
   ]
 }
