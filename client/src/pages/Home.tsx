@@ -29,7 +29,7 @@ const LOGO_URL = BRAND_ASSETS.logo;
 const HERO_URL = BRAND_ASSETS.hero;
 const METODO_URL = BRAND_ASSETS.metodo;
 const DADOS_URL = BRAND_ASSETS.dados;
-const lusophoneJurisdictions = dataProtectionJurisdictions.filter(jurisdiction => ["PT", "AO", "MZ", "CV"].includes(jurisdiction.code));
+const lusophoneJurisdictions = dataProtectionJurisdictions.filter(jurisdiction => ["BR", "PT", "AO", "MZ", "CV"].includes(jurisdiction.code));
 
 type Inquiry = {
   nome: string;
@@ -236,9 +236,9 @@ export default function Home() {
           <div className="section-heading lusophone-home-heading">
             <div>
               <div className="eyebrow"><span /> Proteção de dados lusófona</div>
-              <h2>Conformidade em quatro países.<br /><em>Contextos próprios.</em></h2>
+              <h2>Conformidade em cinco países.<br /><em>Contextos próprios.</em></h2>
             </div>
-            <p>Destacamos Portugal, Angola, Moçambique e Cabo Verde em uma trilha técnica de governança e proteção de dados. O idioma aproxima a operação; a conformidade precisa respeitar a fonte local.</p>
+            <p>Destacamos Brasil, Portugal, Angola, Moçambique e Cabo Verde em uma trilha técnica de governança e proteção de dados. O idioma aproxima a operação; a conformidade precisa respeitar a fonte local.</p>
           </div>
           <div className="lusophone-home-grid">
             {lusophoneJurisdictions.map(jurisdiction => (

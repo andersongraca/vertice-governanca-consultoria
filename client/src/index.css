@@ -912,7 +912,7 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
 .lusophone-home-section { padding: 112px 4.3vw 118px; background: var(--paper-deep); }
 .lusophone-home-heading { align-items: end; }
 .lusophone-home-heading h2 { margin-top: 18px; }
-.lusophone-home-grid { margin-top: 61px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.lusophone-home-grid { margin-top: 61px; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .lusophone-home-grid article { min-height: 315px; padding: 22px 20px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(244,241,233,.52); display: flex; flex-direction: column; }
 .lusophone-home-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .lusophone-home-card-top span { color: var(--copper); font-size: 10px; font-weight: 800; letter-spacing: .1em; }

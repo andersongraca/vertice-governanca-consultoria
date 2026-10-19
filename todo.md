@@ -128,3 +128,11 @@
 - [x] Adicionar Portugal, Angola, Moçambique e Cabo Verde em uma seção dedicada da Home.
 - [x] Conectar a seção à página comparativa de proteção de dados, fontes e limites jurídicos.
 - [x] Validar e publicar a nova página, navegação e seção lusófona.
+
+
+## Ajuste — Brasil no mapa de conformidade
+
+- [x] Incluir o Brasil na seção da Home junto de Portugal, Angola, Moçambique e Cabo Verde.
+- [x] Atualizar o título para “Conformidade em cinco países”.
+- [x] Ajustar o grid responsivo para apresentar os cinco contextos.
+- [ ] Publicar a correção no GitHub Pages.
