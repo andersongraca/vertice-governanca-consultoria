@@ -12,25 +12,21 @@ import {
   ChevronRight,
   ClipboardCheck,
   Copy,
-  Database,
   Menu,
-  Network,
   ShieldCheck,
   Sparkles,
-  Target,
   X,
 } from "lucide-react";
 import { Link } from "wouter";
 import { ContactChannels } from "@/components/ContactChannels";
 import { Checkbox } from "@/components/ui/checkbox";
 import { BRAND_ASSETS } from "@/lib/brandAssets";
+import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
 const LOGO_URL = BRAND_ASSETS.logo;
 const HERO_URL = BRAND_ASSETS.hero;
 const METODO_URL = BRAND_ASSETS.metodo;
 const DADOS_URL = BRAND_ASSETS.dados;
-
-type ServiceKey = "governanca" | "planejamento" | "projetos" | "dados" | "servicos" | "transformacao" | "ia";
 
 type Inquiry = {
   nome: string;
@@ -39,101 +35,16 @@ type Inquiry = {
   email: string;
 };
 
-const services: Record<
-  ServiceKey,
-  {
-    eyebrow: string;
-    title: string;
-    description: string;
-    outcome: string;
-    delivery: string[];
-    icon: typeof ShieldCheck;
-    tone: string;
-  }
-> = {
-  governanca: {
-    eyebrow: "01 · Direção de TI",
-    title: "Governança de TI e Portfólio de Iniciativas.",
-    description:
-      "Estruturamos decisões, comitês, papéis, indicadores, riscos e prioridades para que a tecnologia gere valor mensurável ao negócio.",
-    outcome: "Mais visibilidade sobre investimentos, riscos, fornecedores e prioridades.",
-    delivery: ["Diagnóstico de maturidade", "Modelo de decisão", "Indicadores e plano de ação"],
-    icon: ShieldCheck,
-    tone: "governance",
-  },
-  planejamento: {
-    eyebrow: "02 · Direção estratégica",
-    title: "Planejamento Estratégico de TIC e Roadmaps.",
-    description:
-      "Construímos diagnósticos, roadmaps, políticas e planos de ação para orientar investimentos, serviços e iniciativas digitais.",
-    outcome: "Uma direção prática para conectar prioridades institucionais e evolução tecnológica.",
-    delivery: ["Diagnóstico estratégico", "Roadmap priorizado", "Políticas e plano de ação"],
-    icon: Target,
-    tone: "planning",
-  },
-  projetos: {
-    eyebrow: "03 · Projetos que avançam",
-    title: "PMO e Gestão de Projetos e Programas de TIC.",
-    description:
-      "Organizamos portfólios, cronogramas, riscos, benefícios e ritos executivos para projetos complexos avançarem com clareza e controle.",
-    outcome: "Projetos e programas críticos com cadência, responsáveis e decisões visíveis.",
-    delivery: ["Estrutura de PMO", "Gestão de riscos", "Ritos executivos"],
-    icon: ClipboardCheck,
-    tone: "projects",
-  },
-  dados: {
-    eyebrow: "04 · Dados que orientam",
-    title: "Governança de Dados, Privacidade e Apoio Técnico à LGPD.",
-    description:
-      "Mapeamos dados, processos, riscos e controles; apoiamos a implantação de rotinas de privacidade, indicadores e capacitação.",
-    outcome: "Dados organizados para decisões confiáveis e privacidade tratada como rotina de gestão.",
-    delivery: ["Mapa de dados", "Controles de privacidade", "Capacitação e roadmap"],
-    icon: Database,
-    tone: "data",
-  },
-  servicos: {
-    eyebrow: "05 · Serviços e fornecedores",
-    title: "Gestão de Serviços, Contratos e Fornecedores de TIC.",
-    description:
-      "Definimos níveis de serviço, critérios de aceite, indicadores, controles de terceiros e rotinas de acompanhamento de contratos tecnológicos.",
-    outcome: "Serviços e fornecedores acompanhados por critérios claros de desempenho e valor.",
-    delivery: ["Níveis de serviço", "Critérios de aceite", "Governança de terceiros"],
-    icon: Network,
-    tone: "services",
-  },
-  transformacao: {
-    eyebrow: "06 · Evolução com direção",
-    title: "Transformação Digital Orientada à Governança.",
-    description:
-      "Priorizamos iniciativas, redesenhamos processos, estruturamos a gestão da mudança e acompanhamos a evolução do roadmap digital.",
-    outcome: "Uma transformação conectada a prioridades, processos e resultados verificáveis.",
-    delivery: ["Iniciativas prioritárias", "Redesenho de processos", "Gestão da mudança"],
-    icon: Target,
-    tone: "transformation",
-  },
-  ia: {
-    eyebrow: "07 · IA com responsabilidade",
-    title: "Governança de IA e Uso Responsável de Dados.",
-    description:
-      "Criamos diretrizes, critérios de risco, papéis, controles e práticas de capacitação para adoção responsável de inteligência artificial.",
-    outcome: "Iniciativas de IA orientadas por valor, responsabilidade e controles proporcionais.",
-    delivery: ["Diretrizes de uso", "Critérios de risco", "Papéis e capacitação"],
-    icon: ClipboardCheck,
-    tone: "ai",
-  },
-};
-
-const serviceOrder: ServiceKey[] = ["governanca", "planejamento", "projetos", "dados", "servicos", "transformacao", "ia"];
-
 const navItems = [
   { label: "Serviços", href: "/servicos" },
   { label: "Blog", href: "/blog" },
+  { label: "Privacidade", href: "/protecao-dados" },
   { label: "Método", href: "/metodo" },
   { label: "Quem somos", href: "/socios" },
 ];
 
 export default function Home() {
-  const [activeService, setActiveService] = useState<ServiceKey>("governanca");
+  const [activeService, setActiveService] = useState(serviceCatalog[0].id);
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [inquiry, setInquiry] = useState<Inquiry | null>(null);
@@ -142,7 +53,7 @@ export default function Home() {
   const [modalAntiSpamError, setModalAntiSpamError] = useState("");
   const [modalStartedAt, setModalStartedAt] = useState(0);
 
-  const service = services[activeService];
+  const service = getServiceById(activeService);
   const ServiceIcon = service.icon;
 
   const emailDraft = useMemo(() => {
@@ -284,22 +195,22 @@ export default function Home() {
 
           <div className="service-explorer">
             <div className="service-tabs" role="tablist" aria-label="Frentes de atuação">
-              {serviceOrder.map((key, index) => (
+              {serviceCatalog.map((item, index) => (
                 <button
-                  key={key}
-                  id={`tab-${key}`}
+                  key={item.id}
+                  id={`tab-${item.id}`}
                   type="button"
                   role="tab"
-                  aria-selected={activeService === key}
-                  aria-controls={`panel-${key}`}
-                  className={activeService === key ? "active" : ""}
-                  onClick={() => setActiveService(key)}
+                  aria-selected={activeService === item.id}
+                  aria-controls={`panel-${item.id}`}
+                  className={activeService === item.id ? "active" : ""}
+                  onClick={() => setActiveService(item.id)}
                 >
-                  <span>0{index + 1}</span>{services[key].title.split(".")[0]}
+                  <span>{item.number}</span>{item.short}
                 </button>
               ))}
             </div>
-            <article id={`panel-${activeService}`} className={`service-panel ${service.tone}`} role="tabpanel" aria-labelledby={`tab-${activeService}`}>
+            <article id={`panel-${activeService}`} className="service-panel" role="tabpanel" aria-labelledby={`tab-${activeService}`}>
               <div className="panel-topline">
                 <span>{service.eyebrow}</span>
                 <ServiceIcon size={25} strokeWidth={1.5} />
@@ -309,10 +220,10 @@ export default function Home() {
               <div className="panel-bottom">
                 <div className="outcome"><Sparkles size={17} /> <span>{service.outcome}</span></div>
                 <ul>
-                  {service.delivery.map((item) => <li key={item}><Check size={16} />{item}</li>)}
+                  {service.deliverables.map((item) => <li key={item}><Check size={16} />{item}</li>)}
                 </ul>
               </div>
-              <Link href="/servicos" className="home-offer-link">Ver portfólio completo de Serviços <ArrowRight size={16} /></Link>
+              <Link href={`/servicos?service=${encodeURIComponent(service.id)}`} className="home-offer-link">Ver esta frente no portfólio completo <ArrowRight size={16} /></Link>
             </article>
           </div>
         </section>
@@ -336,7 +247,7 @@ export default function Home() {
             <div className="eyebrow eyebrow-light"><span /> Informação sob controle</div>
             <h2>Não entregamos <em>só relatórios.</em><br />Construímos <em>decisões confiáveis.</em></h2>
             <p>Informações, serviços, riscos, indicadores e projetos devem convergir para um resultado que a diretoria reconhece: controle sobre o que importa.</p>
-            <button type="button" className="inverse-text-cta" onClick={() => { setActiveService("dados"); scrollTo("atuacao"); }}>
+            <button type="button" className="inverse-text-cta" onClick={() => { setActiveService("gestao-dados"); scrollTo("atuacao"); }}>
               Explorar gestão de informações <ArrowRight size={17} />
             </button>
           </div>
@@ -416,7 +327,7 @@ export default function Home() {
                   <label>Seu nome<input name="nome" required placeholder="Como podemos chamar você?" /></label>
                   <label>Empresa<input name="empresa" required placeholder="Nome da empresa" /></label>
                   <label>E-mail de contato<input type="email" name="email" required placeholder="voce@empresa.com.br" /></label>
-                  <label>Principal desafio<select name="desafio" required defaultValue=""><option value="" disabled>Selecione uma frente</option><option>Governança de TI e Portfólio de Iniciativas</option><option>Planejamento Estratégico de TIC e Roadmaps</option><option>PMO e Gestão de Projetos e Programas de TIC</option><option>Governança de Dados, Privacidade e Apoio Técnico à LGPD</option><option>Gestão de Serviços, Contratos e Fornecedores de TIC</option><option>Transformação Digital Orientada à Governança</option><option>Governança de IA e Uso Responsável de Dados</option></select></label>
+                  <label>Principal desafio<select name="desafio" required defaultValue=""><option value="" disabled>Selecione uma frente</option>{serviceCatalog.map((item) => <option key={item.id}>{item.title.replace(/\.$/, "")}</option>)}</select></label>
                   <label className="form-honeypot" aria-hidden="true">Não preencha este campo<input name="website" tabIndex={-1} autoComplete="off" /></label>
                   <div className="form-notice form-full"><ShieldCheck size={17} /><p>Use este formulário somente para contato comercial. Não compartilhe senhas, dados bancários, acessos ou informações sigilosas.</p></div>
                   <div className="form-verification form-full"><label>Verificação antispam: quanto é 5 + 3? <input required name="verification" inputMode="numeric" placeholder="Resposta" /></label><label className="consent-check"><Checkbox checked={modalConsent} onCheckedChange={(checked) => setModalConsent(checked === true)} aria-label="Concordo com o aviso de privacidade" /><span>Li o <Link href="/privacidade">aviso de privacidade e uso adequado</Link>.</span></label>{modalAntiSpamError && <p className="form-error" role="alert">{modalAntiSpamError}</p>}</div>
