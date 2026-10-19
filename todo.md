@@ -55,3 +55,12 @@
 - [x] Substituir a autoria e as mensagens de commits pela identidade da Vértice ou de Anderson Graça.
 - [x] Forçar a atualização do histórico limpo no repositório GitHub.
 - [x] Confirmar a versão publicada no GitHub e sincronizar qualquer alteração pendente.
+
+
+## Entrega — Blog e Serviços por especialização
+- [x] Criar a navegação pública Serviços e Blog, preservando o alias Atuação e os acessos existentes.
+- [x] Estruturar as nove frentes de Serviços: Gestão de Serviços; Gestão de Projetos em TI; alinhamento estratégico de negócio e TIC; Gestão do Conhecimento; Segurança e Confiabilidade; Gestão de Dados; Aquisições e Contratos; Arquitetura Organizacional; Governança e implementação ISO/IEC 27001 e 27701.
+- [x] Criar o hub editorial do Blog com filtros por tema e conteúdos iniciais relacionados às áreas de especialização.
+- [x] Criar páginas individuais de artigos com links internos, CTA para diagnóstico e metadados de compartilhamento.
+- [x] Atualizar manifestos de rotas, sitemap e robots para a publicação pública.
+- [ ] Validar tipagem, build, rotas e publicação no GitHub Pages.

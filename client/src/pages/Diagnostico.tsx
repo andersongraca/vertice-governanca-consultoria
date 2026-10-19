@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 type Brief = { nome: string; empresa: string; email: string; area: string; contexto: string };
 
-const areas = ["Governança de TI e Portfólio de Iniciativas", "Planejamento Estratégico de TIC e Roadmaps", "PMO e Gestão de Projetos e Programas de TIC", "Governança de Dados, Privacidade e Apoio Técnico à LGPD", "Gestão de Serviços, Contratos e Fornecedores de TIC", "Transformação Digital Orientada à Governança", "Governança de IA e Uso Responsável de Dados"];
+const areas = ["Gestão de Serviços de Tecnologia da Informação", "Gestão de Projetos e Programas em Tecnologia da Informação", "Alinhamento dos processos estratégicos de negócio com a TIC", "Gestão do conhecimento consolidado na cultura organizacional", "Gestão de Segurança e Confiabilidade de Recursos Tecnológicos", "Gestão de Dados para decisões confiáveis", "Gestão de Aquisições e Contratos de TIC", "Arquitetura Organizacional baseada em maturidade", "Governança e implementação ISO/IEC 27001 e ISO/IEC 27701"];
 
 export default function Diagnostico() {
   const search = useSearch();
@@ -70,7 +70,7 @@ export default function Diagnostico() {
           <div className="diagnostic-ready-page"><div className="ready-flag"><Check size={23} /></div><div><div className="eyebrow"><span /> Solicitação preparada</div><h2>Sua conversa começa<br /><em>com mais clareza.</em></h2><p>Copie a mensagem abaixo e encaminhe para o e-mail comercial da Vértice quando ele estiver configurado.</p><pre>{message}</pre><div className="ready-actions"><button className="primary-cta" type="button" onClick={copyMessage}>{copied ? <><Check size={17} /> Mensagem copiada</> : <><Copy size={17} /> Copiar mensagem</>}</button><button className="route-secondary-button" type="button" onClick={() => { setBrief(null); setCopied(false); }}>Editar solicitação <X size={16} /></button></div></div></div>
         )}
       </section>
-      <section className="route-mini-footer"><p>Prefere começar pelo desafio que exige atenção agora?</p><Link href="/atuacao">Ver frentes de atuação <ArrowRight size={16} /></Link></section>
+      <section className="route-mini-footer"><p>Prefere começar pelo desafio que exige atenção agora?</p><Link href="/servicos">Ver frentes de serviço <ArrowRight size={16} /></Link></section>
     </SiteChrome>
   );
 }

@@ -126,7 +126,8 @@ const services: Record<
 const serviceOrder: ServiceKey[] = ["governanca", "planejamento", "projetos", "dados", "servicos", "transformacao", "ia"];
 
 const navItems = [
-  { label: "Atuação", href: "/atuacao" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Blog", href: "/blog" },
   { label: "Método", href: "/metodo" },
   { label: "Quem somos", href: "/socios" },
 ];
@@ -311,7 +312,7 @@ export default function Home() {
                   {service.delivery.map((item) => <li key={item}><Check size={16} />{item}</li>)}
                 </ul>
               </div>
-              <Link href="/atuacao" className="home-offer-link">Ver portfólio completo de Governança de TI <ArrowRight size={16} /></Link>
+              <Link href="/servicos" className="home-offer-link">Ver portfólio completo de Serviços <ArrowRight size={16} /></Link>
             </article>
           </div>
         </section>

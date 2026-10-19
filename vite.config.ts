@@ -4,7 +4,8 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig } from "vite";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/vertice-governanca-consultoria/" : "/",
   plugins: [react(), tailwindcss(), jsxLocPlugin()],
   resolve: {
     alias: {
@@ -28,4 +29,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
