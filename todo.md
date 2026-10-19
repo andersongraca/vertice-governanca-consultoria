@@ -63,4 +63,4 @@
 - [x] Criar o hub editorial do Blog com filtros por tema e conteúdos iniciais relacionados às áreas de especialização.
 - [x] Criar páginas individuais de artigos com links internos, CTA para diagnóstico e metadados de compartilhamento.
 - [x] Atualizar manifestos de rotas, sitemap e robots para a publicação pública.
-- [ ] Validar tipagem, build, rotas e publicação no GitHub Pages.
+- [x] Validar tipagem, build, rotas e publicação no GitHub Pages.
