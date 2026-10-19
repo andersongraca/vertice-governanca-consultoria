@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://andersongraca.github.io/vertice-governanca-consultoria/sitemap.xml

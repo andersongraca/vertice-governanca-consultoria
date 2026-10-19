@@ -1,0 +1,19 @@
+{
+  "routes": [
+    { "path": "/", "title": "Vértice Governança de TI" },
+    { "path": "/servicos", "title": "Serviços | Vértice Governança de TI" },
+    { "path": "/atuacao", "title": "Serviços | Vértice Governança de TI" },
+    { "path": "/blog", "title": "Blog | Vértice Governança de TI" },
+    { "path": "/blog/:slug", "title": "Artigo | Vértice Governança de TI" },
+    { "path": "/metodo", "title": "Método | Vértice Governança de TI" },
+    { "path": "/socios", "title": "Quem somos | Vértice Governança de TI" },
+    {
+      "path": "/diagnostico",
+      "title": "Diagnóstico executivo | Vértice Governança de TI"
+    },
+    {
+      "path": "/privacidade",
+      "title": "Privacidade | Vértice Governança de TI"
+    }
+  ]
+}
