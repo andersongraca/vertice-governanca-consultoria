@@ -117,4 +117,4 @@
 - [x] Adicionar botão global de voltar ao topo.
 - [x] Adicionar botão flutuante de WhatsApp em estado “em breve”, sem URL inventada.
 - [x] Adicionar YouTube ao rodapé em estado “em configuração”, sem canal oficial publicado.
-- [ ] Validar e publicar a nova interface no GitHub Pages.
+- [x] Validar e publicar a nova interface no GitHub Pages.
