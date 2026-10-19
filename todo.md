@@ -135,4 +135,4 @@
 - [x] Incluir o Brasil na seção da Home junto de Portugal, Angola, Moçambique e Cabo Verde.
 - [x] Atualizar o título para “Conformidade em cinco países”.
 - [x] Ajustar o grid responsivo para apresentar os cinco contextos.
-- [ ] Publicar a correção no GitHub Pages.
+- [x] Publicar a correção no GitHub Pages.
