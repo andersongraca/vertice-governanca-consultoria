@@ -20,6 +20,7 @@ import {
 import { Link } from "wouter";
 import { ContactChannels } from "@/components/ContactChannels";
 import { Checkbox } from "@/components/ui/checkbox";
+import FloatingActions from "@/components/FloatingActions";
 import { BRAND_ASSETS } from "@/lib/brandAssets";
 import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
@@ -108,11 +109,11 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Vértice Consultoria em TI e Governança — início" onClick={() => scrollTo("inicio")}>
+        <a className="brand" href="#inicio" aria-label="Vértice Consultoria e Governança em TI — início" onClick={() => scrollTo("inicio")}>
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>CONSULTORIA EM TI</small>
+            <small>CONSULTORIA E GOVERNANÇA EM TI</small>
           </span>
         </a>
 
@@ -305,7 +306,7 @@ export default function Home() {
       <footer className="site-footer">
         <a className="brand footer-brand" href="#inicio" onClick={() => scrollTo("inicio")}>
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
-          <span className="brand-type"><strong>VÉRTICE</strong><small>GOVERNANÇA DE TI</small></span>
+          <span className="brand-type"><strong>VÉRTICE</strong><small>CONSULTORIA E GOVERNANÇA EM TI</small></span>
         </a>
         <p>Menos ruído. Mais decisão. Execução controlada.</p>
         <div className="footer-utility">
@@ -313,6 +314,8 @@ export default function Home() {
           <div className="footer-legal"><Link href="/privacidade">Privacidade e uso adequado</Link><span>© {new Date().getFullYear()} Vértice Consultoria</span></div>
         </div>
       </footer>
+
+      <FloatingActions />
 
       {contactOpen && (
         <div className="contact-layer" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setContactOpen(false); }}>

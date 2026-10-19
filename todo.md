@@ -109,3 +109,12 @@
 - [x] Criar módulos específicos de conformidade técnica para Brasil, Portugal, Angola, Moçambique e Cabo Verde.
 - [x] Criar programa integrado lusófono e opção de governança continuada.
 - [x] Incluir entregáveis, cronogramas, critérios de aceite, premissas, exclusões, papéis e campos comerciais.
+
+
+## Entrega — Marca, ações rápidas e canais sociais
+
+- [x] Padronizar cabeçalho e rodapé como “Consultoria e Governança em TI”.
+- [x] Adicionar botão global de voltar ao topo.
+- [x] Adicionar botão flutuante de WhatsApp em estado “em breve”, sem URL inventada.
+- [x] Adicionar YouTube ao rodapé em estado “em configuração”, sem canal oficial publicado.
+- [ ] Validar e publicar a nova interface no GitHub Pages.

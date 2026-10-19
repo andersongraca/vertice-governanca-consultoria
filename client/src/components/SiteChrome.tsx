@@ -3,6 +3,7 @@ import { ArrowDownRight, Menu, X } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import { Link } from "wouter";
 import { ContactChannels } from "@/components/ContactChannels";
+import FloatingActions from "@/components/FloatingActions";
 import { BRAND_ASSETS } from "@/lib/brandAssets";
 
 const LOGO_URL = BRAND_ASSETS.logo;
@@ -29,12 +30,12 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
         <Link
           className="brand"
           href="/"
-          aria-label="Vértice Consultoria em TI e Governança — início"
+          aria-label="Vértice Consultoria e Governança em TI — início"
         >
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>CONSULTORIA EM TI</small>
+            <small>CONSULTORIA E GOVERNANÇA EM TI</small>
           </span>
         </Link>
 
@@ -88,7 +89,7 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>CONSULTORIA EM TI</small>
+            <small>CONSULTORIA E GOVERNANÇA EM TI</small>
           </span>
         </Link>
         <p>Menos ruído. Mais decisão. Execução controlada.</p>
@@ -100,6 +101,7 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
           </div>
         </div>
       </footer>
+      <FloatingActions />
     </div>
   );
 }

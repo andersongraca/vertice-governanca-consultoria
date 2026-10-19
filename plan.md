@@ -24,6 +24,7 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/lib/caseStudies.ts`: dez cenários de aplicação vinculados às frentes de Serviços, com contexto, intervenção, evidência e sinal de sucesso; os textos são ilustrativos até receberem dados de clientes autorizados.
 - `client/src/lib/consultingCapabilities.ts`: quatro capacidades transversais sustentadas pela especialização e pelo ITIL Version 5 — estratégia e investimento; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
 - `client/src/lib/blogPosts.ts`: três artigos detalhados sobre a intersecção entre ITIL Version 5, ISO/IEC 42001, LGPD/RGPD e privacidade em países de língua portuguesa, com fontes oficiais exibidas no artigo.
+- `client/src/components/FloatingActions.tsx`: ações globais de voltar ao topo e WhatsApp, com o canal mantido como placeholder até a definição de uma URL oficial.
 - `client/src/components/PageMeta.tsx`: metadados de rota no cliente (título, descrição, canonical, Open Graph e Twitter Card) para Serviços, Blog e artigos.
 - `client/src/pages/Services.tsx`: rota `/servicos` posicionada como Consultoria em TI, Governança e Gestão, com navegação lateral/interativa entre as dez frentes, capacidades complementares, seção de casos de aplicação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
@@ -47,6 +48,7 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - Consultoria em TI é posicionada como guarda-chuva comercial, sem virar uma 11ª disciplina duplicada. As dez frentes são ofertas principais; as quatro capacidades complementares mostram a amplitude da especialização e do ITIL Version 5.
 - O site não oferece como serviço próprio parecer jurídico, operação de infraestrutura, desenvolvimento de software, segurança ofensiva, perícia, auditoria independente ou certificação ISO.
 - Artigos técnicos e regulatórios incluem fontes oficiais e deixam explícita a diferença entre governança técnica, orientação normativa e aconselhamento jurídico.
+- O rodapé exibe YouTube como canal em configuração, sem publicar URL inventada; o WhatsApp flutuante permanece visível como “em breve” até existir um número comercial oficial.
 
 ## Direção de design
 
