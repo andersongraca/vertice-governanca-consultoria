@@ -72,4 +72,4 @@
 - [x] Criar a décima frente de Serviços: Governança de Privacidade e Dados para operações lusófonas.
 - [x] Criar o mapa comparativo `/protecao-dados` com status jurídico, autoridades, escopo, transferências, limites e fontes oficiais.
 - [x] Criar conteúdo editorial do Blog sobre proteção de dados lusófona e conectar a nova frente ao diagnóstico.
-- [ ] Validar tipagem, build, rotas profundas e republicar o site com a nova trilha regulatória.
+- [x] Validar tipagem, build, rotas profundas e republicar o site com a nova trilha regulatória.
