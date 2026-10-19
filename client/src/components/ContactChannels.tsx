@@ -1,5 +1,11 @@
 /** DESIGN — Horizonte de Controle: canais de contato aparecem como sinais operacionais, claros e discretos. */
-import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
+import {
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Youtube,
+} from "lucide-react";
 
 // Preencha estes valores quando a Vértice definir os canais comerciais oficiais.
 export const CONTACT_EMAIL = "";
@@ -13,6 +19,7 @@ const channels = [
   { label: "Instagram", href: INSTAGRAM_URL, icon: Instagram },
   { label: "LinkedIn", href: LINKEDIN_URL, icon: Linkedin },
   { label: "YouTube", href: YOUTUBE_URL, icon: Youtube },
+  { label: "WhatsApp", href: WHATSAPP_URL, icon: MessageCircle },
 ];
 
 export function ContactChannels() {

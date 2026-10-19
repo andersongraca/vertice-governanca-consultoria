@@ -906,3 +906,90 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
   .whatsapp-float span { max-width: 0; overflow: hidden; opacity: 0; transition: max-width 180ms var(--ease-out), opacity 180ms var(--ease-out); }
   .whatsapp-float:hover span, .whatsapp-float:focus-visible span { max-width: 110px; opacity: 1; }
 }
+
+
+/* DESIGN — Proteção lusófona e contato: contexto local, proposta clara e próximo passo acionável. */
+.lusophone-home-section { padding: 112px 4.3vw 118px; background: var(--paper-deep); }
+.lusophone-home-heading { align-items: end; }
+.lusophone-home-heading h2 { margin-top: 18px; }
+.lusophone-home-grid { margin-top: 61px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.lusophone-home-grid article { min-height: 315px; padding: 22px 20px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(244,241,233,.52); display: flex; flex-direction: column; }
+.lusophone-home-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.lusophone-home-card-top span { color: var(--copper); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+.lusophone-home-card-top small { color: var(--ink-soft); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-align: right; text-transform: uppercase; }
+.lusophone-home-grid h3 { margin: 43px 0 9px; font-size: 30px; line-height: .98; }
+.lusophone-home-grid strong { color: var(--copper); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
+.lusophone-home-grid p { margin: 14px 0 18px; color: var(--ink-soft); font-size: 11px; line-height: 1.58; }
+.lusophone-home-grid a { display: inline-flex; align-items: center; gap: 7px; margin-top: auto; align-self: flex-start; color: var(--ink); border-bottom: 1px solid var(--copper); padding-bottom: 5px; text-decoration: none; font-size: 9px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.lusophone-home-grid a:hover { color: var(--copper); }
+.lusophone-home-footer { margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 38px; }
+.lusophone-home-footer p { max-width: 610px; margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.7; }
+.lusophone-home-footer .primary-cta { text-decoration: none; white-space: nowrap; }
+
+.contact-page-main { background: var(--paper); }
+.contact-hero { min-height: 430px; }
+.contact-form-section { background: var(--paper-deep); }
+.contact-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; align-items: start; }
+.contact-copy h2 { max-width: 570px; margin: 19px 0 24px; font-size: clamp(3rem, 4.8vw, 5.4rem); line-height: .92; }
+.contact-copy > p { max-width: 510px; color: var(--ink-soft); font-size: 14px; line-height: 1.75; }
+.contact-offer-list { margin: 34px 0 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.contact-offer-list li { display: flex; align-items: center; gap: 9px; padding: 13px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 12px; }
+.contact-offer-list svg { color: var(--copper); flex: 0 0 auto; }
+.contact-direct-card { margin-top: 30px; padding: 19px; display: grid; grid-template-columns: 28px 1fr; gap: 12px; background: var(--petrol); color: var(--paper); }
+.contact-direct-card > svg { color: var(--copper-pale); margin-top: 2px; }
+.contact-direct-card strong { font-family: "DM Serif Display", serif; font-size: 22px; font-weight: 400; }
+.contact-direct-card p { margin: 5px 0 14px; color: rgba(244,241,233,.68); font-size: 11px; line-height: 1.55; }
+.contact-direct-card a { display: inline-flex; align-items: center; gap: 7px; color: var(--copper-pale); border-bottom: 1px solid rgba(237,195,169,.55); padding-bottom: 5px; text-decoration: none; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.contact-proposal-form { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 33px; background: linear-gradient(145deg, #f8f5ed 0%, var(--paper) 67%, #eee7da 100%); border-top: 2px solid var(--petrol); box-shadow: 0 24px 54px rgba(12,41,45,.12); }
+.contact-proposal-form::after { content: "VÉRTICE / PROPOSTA"; position: absolute; top: 18px; right: 23px; color: var(--copper); font-size: 8px; font-weight: 800; letter-spacing: .14em; }
+.contact-form-heading { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 12px; padding-bottom: 19px; border-bottom: 1px solid var(--line); color: var(--copper); }
+.contact-form-heading > div { display: grid; gap: 4px; color: var(--ink); }
+.contact-form-heading strong { font-family: "DM Serif Display", serif; font-size: 24px; font-weight: 400; }
+.contact-form-heading span { color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
+.contact-proposal-form label { display: grid; gap: 7px; color: var(--ink); font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.contact-proposal-form input:not([type="checkbox"]), .contact-proposal-form select, .contact-proposal-form textarea { width: 100%; border: 1px solid rgba(12,41,45,.24); border-radius: 0; background: transparent; color: var(--ink); padding: 11px 12px; font-size: 13px; font-weight: 500; letter-spacing: normal; text-transform: none; resize: vertical; outline: none; }
+.contact-proposal-form input:not([type="checkbox"]), .contact-proposal-form select { height: 45px; }
+.contact-proposal-form input:not([type="checkbox"]):focus, .contact-proposal-form select:focus, .contact-proposal-form textarea:focus { border-color: var(--copper); }
+.contact-consent { display: flex !important; grid-column: 1 / -1; align-items: flex-start; gap: 9px !important; color: var(--ink-soft) !important; font-size: 10px !important; font-weight: 500 !important; letter-spacing: 0 !important; line-height: 1.55; text-transform: none !important; }
+.contact-consent input { width: 15px; height: 15px; margin: 1px 0 0; accent-color: var(--copper); }
+.contact-form-actions { grid-column: 1 / -1; display: flex; align-items: center; flex-wrap: wrap; gap: 17px; padding-top: 3px; border-top: 1px solid var(--line); }
+.contact-form-actions .primary-cta { margin-top: 12px; }
+.contact-sent-note { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-soft); font-size: 10px; line-height: 1.45; }
+.contact-sent-note svg { color: var(--copper); }
+.contact-form-note { grid-column: 1 / -1; color: var(--ink-soft); font-size: 10px; line-height: 1.55; }
+.contact-process-section { padding: 108px 8vw 114px; background: var(--paper); }
+.contact-process-grid { margin-top: 59px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.contact-process-grid article { min-height: 220px; padding: 21px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.contact-process-grid article > span { color: var(--copper); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.contact-process-grid strong { display: block; margin: 59px 0 11px; font-family: "DM Serif Display", serif; font-size: 29px; font-weight: 400; }
+.contact-process-grid p { max-width: 280px; margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.65; }
+.contact-privacy-callout { display: grid; grid-template-columns: 1.1fr .65fr auto; align-items: center; gap: 48px; padding: 75px 8vw; background: var(--petrol); color: var(--paper); }
+.contact-privacy-callout h2 { max-width: 700px; margin: 15px 0 0; font-size: clamp(2.4rem, 4vw, 4.4rem); line-height: .93; }
+.contact-privacy-callout h2 em { color: var(--copper-pale); }
+.contact-privacy-callout > p { margin: 0; color: rgba(244,241,233,.7); font-size: 14px; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .lusophone-home-grid { grid-template-columns: 1fr 1fr; }
+  .lusophone-home-footer { align-items: flex-start; flex-direction: column; }
+  .contact-layout { grid-template-columns: 1fr; gap: 53px; }
+  .contact-privacy-callout { grid-template-columns: 1fr 1fr; gap: 25px 42px; }
+  .contact-privacy-callout .route-callout-link { grid-column: 1 / -1; justify-self: start; }
+}
+
+@media (max-width: 580px) {
+  .lusophone-home-section { padding: 80px 7vw 83px; }
+  .lusophone-home-grid { grid-template-columns: 1fr; margin-top: 42px; }
+  .lusophone-home-grid article { min-height: 260px; }
+  .lusophone-home-grid h3 { margin-top: 34px; }
+  .lusophone-home-footer .primary-cta { white-space: normal; }
+  .contact-proposal-form { grid-template-columns: 1fr; padding: 25px 20px; }
+  .contact-form-heading { grid-column: 1; }
+  .contact-proposal-form label, .contact-proposal-form label.form-full { grid-column: 1; }
+  .contact-form-actions, .contact-form-note { grid-column: 1; }
+  .contact-process-section { padding: 78px 7vw 83px; }
+  .contact-process-grid { grid-template-columns: 1fr; margin-top: 42px; }
+  .contact-process-grid article { min-height: 180px; }
+  .contact-process-grid strong { margin-top: 34px; }
+  .contact-privacy-callout { grid-template-columns: 1fr; padding: 62px 7vw; }
+  .contact-privacy-callout .route-callout-link { grid-column: auto; }
+}

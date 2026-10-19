@@ -14,6 +14,7 @@ const navigation = [
   { label: "Privacidade", href: "/protecao-dados", key: "privacidade-dados" },
   { label: "Método", href: "/metodo", key: "metodo" },
   { label: "Quem somos", href: "/socios", key: "socios" },
+  { label: "Contato", href: "/contato", key: "contato" },
 ];
 
 type SiteChromeProps = {

@@ -7,8 +7,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Atuacao from "./pages/Atuacao";
 import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Diagnostico from "./pages/Diagnostico";
+import BlogPost from "@/pages/BlogPost";
+import Contato from "@/pages/Contato";
+import Diagnostico from "@/pages/Diagnostico";
 import Home from "./pages/Home";
 import Metodo from "./pages/Metodo";
 import Privacidade from "./pages/Privacidade";
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/metodo" component={Metodo} />
       <Route path="/socios" component={Socios} />
+      <Route path="/contato" component={Contato} />
       <Route path="/diagnostico" component={Diagnostico} />
       <Route path="/protecao-dados" component={ProtecaoDados} />
       <Route path="/privacidade" component={Privacidade} />

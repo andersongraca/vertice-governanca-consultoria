@@ -22,12 +22,14 @@ import { ContactChannels } from "@/components/ContactChannels";
 import { Checkbox } from "@/components/ui/checkbox";
 import FloatingActions from "@/components/FloatingActions";
 import { BRAND_ASSETS } from "@/lib/brandAssets";
+import { dataProtectionJurisdictions } from "@/lib/dataProtection";
 import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
 const LOGO_URL = BRAND_ASSETS.logo;
 const HERO_URL = BRAND_ASSETS.hero;
 const METODO_URL = BRAND_ASSETS.metodo;
 const DADOS_URL = BRAND_ASSETS.dados;
+const lusophoneJurisdictions = dataProtectionJurisdictions.filter(jurisdiction => ["PT", "AO", "MZ", "CV"].includes(jurisdiction.code));
 
 type Inquiry = {
   nome: string;
@@ -42,6 +44,7 @@ const navItems = [
   { label: "Privacidade", href: "/protecao-dados" },
   { label: "Método", href: "/metodo" },
   { label: "Quem somos", href: "/socios" },
+  { label: "Contato", href: "/contato" },
 ];
 
 export default function Home() {
@@ -226,6 +229,31 @@ export default function Home() {
               </div>
               <Link href={`/servicos?service=${encodeURIComponent(service.id)}`} className="home-offer-link">Ver esta frente no portfólio completo <ArrowRight size={16} /></Link>
             </article>
+          </div>
+        </section>
+
+        <section id="privacidade-lusofona" className="lusophone-home-section">
+          <div className="section-heading lusophone-home-heading">
+            <div>
+              <div className="eyebrow"><span /> Proteção de dados lusófona</div>
+              <h2>Conformidade em quatro países.<br /><em>Contextos próprios.</em></h2>
+            </div>
+            <p>Destacamos Portugal, Angola, Moçambique e Cabo Verde em uma trilha técnica de governança e proteção de dados. O idioma aproxima a operação; a conformidade precisa respeitar a fonte local.</p>
+          </div>
+          <div className="lusophone-home-grid">
+            {lusophoneJurisdictions.map(jurisdiction => (
+              <article key={jurisdiction.id}>
+                <div className="lusophone-home-card-top"><span>{jurisdiction.code}</span><small>{jurisdiction.status}</small></div>
+                <h3>{jurisdiction.name}</h3>
+                <strong>{jurisdiction.shortLabel}</strong>
+                <p>{jurisdiction.scope}</p>
+                <Link href={`/protecao-dados#${jurisdiction.id}`}>Ver contexto e fontes <ArrowRight size={15} /></Link>
+              </article>
+            ))}
+          </div>
+          <div className="lusophone-home-footer">
+            <p>Organizamos inventário, fluxos, papéis, contratos, transferências, incidentes e evidências para que a decisão jurídica aconteça sobre fatos visíveis.</p>
+            <Link className="primary-cta" href="/protecao-dados">Conhecer a trilha lusófona <ArrowRight size={17} /></Link>
           </div>
         </section>
 

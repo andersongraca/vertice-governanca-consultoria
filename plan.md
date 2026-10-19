@@ -24,7 +24,8 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/lib/caseStudies.ts`: dez cenários de aplicação vinculados às frentes de Serviços, com contexto, intervenção, evidência e sinal de sucesso; os textos são ilustrativos até receberem dados de clientes autorizados.
 - `client/src/lib/consultingCapabilities.ts`: quatro capacidades transversais sustentadas pela especialização e pelo ITIL Version 5 — estratégia e investimento; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
 - `client/src/lib/blogPosts.ts`: três artigos detalhados sobre a intersecção entre ITIL Version 5, ISO/IEC 42001, LGPD/RGPD e privacidade em países de língua portuguesa, com fontes oficiais exibidas no artigo.
-- `client/src/components/FloatingActions.tsx`: ações globais de voltar ao topo e WhatsApp, com fechamento persistente e link direto para o número comercial oficial quando configurado.
+- `client/src/components/FloatingActions.tsx`: ações globais de voltar ao topo e WhatsApp, com fechamento válido durante a sessão e link direto para o número comercial oficial.
+- `client/src/pages/Contato.tsx`: formulário de propostas comerciais que prepara uma mensagem estruturada e abre o WhatsApp oficial.
 - `client/src/components/PageMeta.tsx`: metadados de rota no cliente (título, descrição, canonical, Open Graph e Twitter Card) para Serviços, Blog e artigos.
 - `client/src/pages/Services.tsx`: rota `/servicos` posicionada como Consultoria em TI, Governança e Gestão, com navegação lateral/interativa entre as dez frentes, capacidades complementares, seção de casos de aplicação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
@@ -49,6 +50,8 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - O site não oferece como serviço próprio parecer jurídico, operação de infraestrutura, desenvolvimento de software, segurança ofensiva, perícia, auditoria independente ou certificação ISO.
 - Artigos técnicos e regulatórios incluem fontes oficiais e deixam explícita a diferença entre governança técnica, orientação normativa e aconselhamento jurídico.
 - O rodapé exibe YouTube como canal em configuração, sem publicar URL inventada; o WhatsApp flutuante usa o número comercial oficial informado pelo cliente e pode ser ocultado com X.
+- O X do WhatsApp oculta o botão apenas durante a sessão atual; um novo carregamento do site o exibe novamente. O ícone do WhatsApp também aparece junto aos canais do rodapé.
+- A Home destaca uma seção de conformidade de dados para Portugal, Angola, Moçambique e Cabo Verde, conectada ao mapa comparativo da rota `/protecao-dados`.
 
 ## Direção de design
 

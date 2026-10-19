@@ -115,6 +115,16 @@
 
 - [x] Padronizar cabeçalho e rodapé como “Consultoria e Governança em TI”.
 - [x] Adicionar botão global de voltar ao topo.
-- [x] Adicionar botão flutuante de WhatsApp com rótulo direto, X pequeno e link oficial para +55 79 98843-863.
+- [x] Adicionar botão flutuante de WhatsApp com rótulo direto, X pequeno, fechamento por sessão e link oficial para +55 79 98843-863.
 - [x] Adicionar YouTube ao rodapé em estado “em configuração”, sem canal oficial publicado.
 - [x] Validar e publicar a nova interface no GitHub Pages.
+
+
+## Entrega — Contato, propostas e destaque de conformidade lusófona
+
+- [x] Fazer o X do WhatsApp ocultar o botão somente até o recarregamento da página.
+- [x] Adicionar o ícone do WhatsApp aos canais sociais do rodapé.
+- [x] Criar a página `/contato` com conteúdo comercial e formulário de propostas integrado ao WhatsApp.
+- [x] Adicionar Portugal, Angola, Moçambique e Cabo Verde em uma seção dedicada da Home.
+- [x] Conectar a seção à página comparativa de proteção de dados, fontes e limites jurídicos.
+- [ ] Validar e publicar a nova página, navegação e seção lusófona.
