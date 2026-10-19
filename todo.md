@@ -81,4 +81,4 @@
 - [x] Apresentar contexto, intervenção, evidência e sinal de sucesso em cada case.
 - [x] Explicitar que os cases são cenários ilustrativos até receberem dados de clientes autorizados.
 - [x] Integrar a seção ao portfólio de Serviços com links para a frente relacionada.
-- [ ] Validar tipagem, build e publicação no GitHub Pages.
+- [x] Validar tipagem, build e publicação no GitHub Pages.
