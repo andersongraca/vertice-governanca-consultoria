@@ -100,3 +100,12 @@
 - [x] Adicionar fontes oficiais aos artigos e explicitar limites entre governança técnica e aconselhamento jurídico.
 - [x] Atualizar categorias, metadados, sitemap e manifestos do Blog.
 - [x] Validar tipagem, build, rotas profundas e publicar os novos artigos.
+
+
+## Entrega — Propostas comerciais de Governança de IA e Dados Lusófonos
+
+- [x] Criar escopo de diagnóstico executivo de Governança de IA e Dados Lusófonos.
+- [x] Criar escopo de implantação de governança de IA alinhada à ISO/IEC 42001 e ao ITIL Version 5.
+- [x] Criar módulos específicos de conformidade técnica para Brasil, Portugal, Angola, Moçambique e Cabo Verde.
+- [x] Criar programa integrado lusófono e opção de governança continuada.
+- [x] Incluir entregáveis, cronogramas, critérios de aceite, premissas, exclusões, papéis e campos comerciais.
