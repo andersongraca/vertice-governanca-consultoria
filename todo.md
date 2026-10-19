@@ -73,3 +73,12 @@
 - [x] Criar o mapa comparativo `/protecao-dados` com status jurídico, autoridades, escopo, transferências, limites e fontes oficiais.
 - [x] Criar conteúdo editorial do Blog sobre proteção de dados lusófona e conectar a nova frente ao diagnóstico.
 - [x] Validar tipagem, build, rotas profundas e republicar o site com a nova trilha regulatória.
+
+
+## Entrega — Estudos de caso por frente de Serviço
+
+- [x] Criar dez estudos de caso de aplicação, um para cada frente do catálogo de Serviços.
+- [x] Apresentar contexto, intervenção, evidência e sinal de sucesso em cada case.
+- [x] Explicitar que os cases são cenários ilustrativos até receberem dados de clientes autorizados.
+- [x] Integrar a seção ao portfólio de Serviços com links para a frente relacionada.
+- [ ] Validar tipagem, build e publicação no GitHub Pages.

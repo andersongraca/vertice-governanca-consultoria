@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearch } from "wouter";
 import PageMeta from "@/components/PageMeta";
 import SiteChrome from "@/components/SiteChrome";
+import { caseStudies } from "@/lib/caseStudies";
 import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
 export default function Services() {
@@ -168,6 +169,9 @@ export default function Services() {
                 Ver mapa de jurisdições <ArrowRight size={16} />
               </Link>
             )}
+            <a className="service-case-link" href={`#case-${service.id}`}>
+              Ver caso de aplicação <ArrowRight size={16} />
+            </a>
           </article>
         </div>
         <aside
@@ -183,6 +187,81 @@ export default function Services() {
             independente permanece fora do escopo da consultoria.
           </p>
         </aside>
+      </section>
+
+      <section id="cases" className="route-section case-studies-section">
+        <div className="case-studies-heading">
+          <div>
+            <div className="eyebrow">
+              <span /> Cases de aplicação
+            </div>
+            <h2>
+              Da frente de serviço
+              <br />
+              <em>à mudança observável.</em>
+            </h2>
+          </div>
+          <div className="case-studies-heading-copy">
+            <p>
+              Cada cenário traduz um desafio recorrente em contexto,
+              intervenção, evidência e sinal de sucesso — para mostrar como a
+              especialização pode aparecer na rotina da organização.
+            </p>
+            <div className="case-studies-disclaimer">
+              <ShieldCheck size={18} aria-hidden="true" />
+              <p>
+                Estes são cenários de aplicação ilustrativos. Não representam
+                clientes, resultados quantitativos ou alegações de projeto sem
+                autorização e evidência pública.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="case-studies-grid">
+          {caseStudies.map(caseStudy => {
+            const serviceReference = getServiceById(caseStudy.serviceId);
+            return (
+              <article
+                id={`case-${caseStudy.serviceId}`}
+                className="case-study-card"
+                key={caseStudy.id}
+              >
+                <header>
+                  <span>{caseStudy.number}</span>
+                  <strong>{serviceReference.short}</strong>
+                </header>
+                <h3>{caseStudy.title}</h3>
+                <div className="case-study-story">
+                  <div>
+                    <span>Contexto</span>
+                    <p>{caseStudy.context}</p>
+                  </div>
+                  <div>
+                    <span>Intervenção</span>
+                    <p>{caseStudy.intervention}</p>
+                  </div>
+                </div>
+                <div className="case-study-evidence">
+                  <span>Como se comprova</span>
+                  <p>{caseStudy.evidence}</p>
+                </div>
+                <div className="case-study-success">
+                  <Sparkles size={16} aria-hidden="true" />
+                  <div>
+                    <span>Sinal de sucesso</span>
+                    <p>{caseStudy.successSignal}</p>
+                  </div>
+                </div>
+                <Link
+                  className="case-study-link"
+                  href={`/servicos?service=${encodeURIComponent(caseStudy.serviceId)}`}
+                >
+                  Ver frente relacionada <ArrowRight size={15} />
+                </Link>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="route-callout services-callout">
