@@ -127,4 +127,4 @@
 - [x] Criar a página `/contato` com conteúdo comercial e formulário de propostas integrado ao WhatsApp.
 - [x] Adicionar Portugal, Angola, Moçambique e Cabo Verde em uma seção dedicada da Home.
 - [x] Conectar a seção à página comparativa de proteção de dados, fontes e limites jurídicos.
-- [ ] Validar e publicar a nova página, navegação e seção lusófona.
+- [x] Validar e publicar a nova página, navegação e seção lusófona.
