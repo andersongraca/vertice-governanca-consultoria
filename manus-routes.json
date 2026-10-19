@@ -8,6 +8,10 @@
     { "path": "/metodo", "title": "Método | Vértice Consultoria em TI" },
     { "path": "/socios", "title": "Quem somos | Vértice Consultoria em TI" },
     {
+      "path": "/contato",
+      "title": "Contato e propostas | Vértice Consultoria em TI"
+    },
+    {
       "path": "/diagnostico",
       "title": "Diagnóstico executivo | Vértice Consultoria em TI"
     },
