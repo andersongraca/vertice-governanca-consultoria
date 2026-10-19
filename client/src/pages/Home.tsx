@@ -108,11 +108,11 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Vértice Governança de TI — início" onClick={() => scrollTo("inicio")}>
+        <a className="brand" href="#inicio" aria-label="Vértice Consultoria em TI e Governança — início" onClick={() => scrollTo("inicio")}>
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>GOVERNANÇA DE TI</small>
+            <small>CONSULTORIA EM TI</small>
           </span>
         </a>
 
@@ -148,10 +148,10 @@ export default function Home() {
           <div className="hero-art" style={{ backgroundImage: `url(${HERO_URL})` }} aria-hidden="true" />
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content">
-            <div className="eyebrow hero-eyebrow"><span /> Governança de TI · Serviços · Projetos</div>
+            <div className="eyebrow hero-eyebrow"><span /> Consultoria em TI · Governança · Gestão</div>
             <h1>Decisões melhores.<br /><em>Execução sob controle.</em></h1>
             <p>
-              Organizamos tecnologia, serviços, riscos e portfólios críticos para que a liderança avance com direção, visibilidade e ritmo de execução.
+              Conectamos estratégia, tecnologia, serviços, riscos e portfólios críticos para que a liderança avance com direção, visibilidade e ritmo de execução.
             </p>
             <div className="hero-actions">
               <Link className="primary-cta" href="/diagnostico">

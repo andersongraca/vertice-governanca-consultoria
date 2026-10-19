@@ -22,8 +22,9 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/lib/blogPosts.ts`: catálogo editorial dos artigos iniciais, incluindo a trilha de Privacidade, com slug, categoria, resumo, tempo de leitura, data editorial e conteúdo estruturado em blocos.
 - `client/src/lib/dataProtection.ts`: catálogo comparável de Brasil, Portugal, Angola, Moçambique e Cabo Verde, com status do marco, autoridade, escopo, pontos de governança, transferências, limites, apoio técnico e fontes primárias.
 - `client/src/lib/caseStudies.ts`: dez cenários de aplicação vinculados às frentes de Serviços, com contexto, intervenção, evidência e sinal de sucesso; os textos são ilustrativos até receberem dados de clientes autorizados.
+- `client/src/lib/consultingCapabilities.ts`: quatro capacidades transversais sustentadas pela especialização e pelo ITIL Version 5 — estratégia e investimento; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
 - `client/src/components/PageMeta.tsx`: metadados de rota no cliente (título, descrição, canonical, Open Graph e Twitter Card) para Serviços, Blog e artigos.
-- `client/src/pages/Services.tsx`: nova rota `/servicos`, com navegação lateral/interativa entre as frentes, seção de casos de aplicação, método de atuação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
+- `client/src/pages/Services.tsx`: rota `/servicos` posicionada como Consultoria em TI, Governança e Gestão, com navegação lateral/interativa entre as dez frentes, capacidades complementares, seção de casos de aplicação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
 - `client/src/pages/BlogPost.tsx`: rota `/blog/:slug`, com leitura individual, índice visual, blocos editoriais e links para outros artigos/diagnóstico.
 - `client/src/pages/ProtecaoDados.tsx`: página `/protecao-dados` com mapa comparativo de jurisdições, aviso de limites profissionais, fontes oficiais e CTA para diagnóstico técnico.
@@ -42,6 +43,8 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - A comunicação separa direito vigente, ato vinculante, orientação oficial, recomendação técnica e proposta não confirmada. Moçambique é apresentado como quadro fragmentado e em monitorização legislativa, sem importar a proposta de lei como requisito atual.
 - Os artigos serão evergreen, educativos e orientados a decisão, sem inventar cases, clientes ou métricas.
 - A seção de cases usa cenários de aplicação e sinais de sucesso documentáveis; não apresenta nomes de clientes, resultados quantitativos ou alegações de projeto sem autorização e evidência.
+- Consultoria em TI é posicionada como guarda-chuva comercial, sem virar uma 11ª disciplina duplicada. As dez frentes são ofertas principais; as quatro capacidades complementares mostram a amplitude da especialização e do ITIL Version 5.
+- O site não oferece como serviço próprio parecer jurídico, operação de infraestrutura, desenvolvimento de software, segurança ofensiva, perícia, auditoria independente ou certificação ISO.
 
 ## Direção de design
 

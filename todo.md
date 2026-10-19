@@ -74,7 +74,6 @@
 - [x] Criar conteúdo editorial do Blog sobre proteção de dados lusófona e conectar a nova frente ao diagnóstico.
 - [x] Validar tipagem, build, rotas profundas e republicar o site com a nova trilha regulatória.
 
-
 ## Entrega — Estudos de caso por frente de Serviço
 
 - [x] Criar dez estudos de caso de aplicação, um para cada frente do catálogo de Serviços.
@@ -82,3 +81,12 @@
 - [x] Explicitar que os cases são cenários ilustrativos até receberem dados de clientes autorizados.
 - [x] Integrar a seção ao portfólio de Serviços com links para a frente relacionada.
 - [x] Validar tipagem, build e publicação no GitHub Pages.
+
+## Entrega — Posicionamento como Consultoria em TI
+
+- [x] Conferir a matriz oficial de disciplinas da especialização em Governança de TI da Unicamp.
+- [x] Cruzar o conteúdo da especialização com o ITIL Version 5 oficial e com o catálogo atual.
+- [x] Definir Consultoria em TI como guarda-chuva comercial, sem duplicar as dez frentes de Serviços.
+- [x] Identificar capacidades complementares: estratégia e investimentos; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
+- [x] Registrar limites de oferta para Direito Digital, ESG amplo, desenvolvimento, infraestrutura, segurança ofensiva, perícia, auditoria e certificação independente.
+- [x] Atualizar Home, cabeçalho e página de Serviços com o novo posicionamento e validar a publicação.

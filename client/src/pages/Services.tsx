@@ -5,6 +5,7 @@ import { Link, useSearch } from "wouter";
 import PageMeta from "@/components/PageMeta";
 import SiteChrome from "@/components/SiteChrome";
 import { caseStudies } from "@/lib/caseStudies";
+import { consultingCapabilities } from "@/lib/consultingCapabilities";
 import { getServiceById, serviceCatalog } from "@/lib/serviceCatalog";
 
 export default function Services() {
@@ -30,8 +31,8 @@ export default function Services() {
   return (
     <SiteChrome active="servicos">
       <PageMeta
-        title="Serviços | Vértice Governança de TI"
-        description="Conheça as frentes de consultoria da Vértice em serviços, projetos, alinhamento estratégico, conhecimento, segurança, dados, contratos, arquitetura organizacional, privacidade lusófona e ISO/IEC 27001 e 27701."
+        title="Consultoria em TI e Serviços | Vértice"
+        description="Consultoria em TI, governança e gestão: dez frentes de atuação em serviços, projetos, estratégia, processos, dados, segurança, contratos, arquitetura, IA, privacidade e ISO."
         path="/servicos"
       />
       <section className="route-hero route-hero-light services-route-hero">
@@ -59,7 +60,7 @@ export default function Services() {
         <div className="services-intro-grid">
           <div>
             <div className="eyebrow">
-              <span /> Dez frentes conectadas
+              <span /> Consultoria em TI · Dez frentes conectadas
             </div>
             <h2>
               O serviço muda.
@@ -99,6 +100,35 @@ export default function Services() {
               melhorado ao longo do tempo.
             </p>
           </article>
+        </div>
+        <div className="consulting-capabilities-heading">
+          <div>
+            <div className="eyebrow">
+              <span /> O que atravessa as frentes
+            </div>
+            <h3>
+              Consultoria em TI com <em>amplitude e foco.</em>
+            </h3>
+          </div>
+          <p>
+            A especialização em Governança de TI, a formação em Computação e o
+            ITIL Version 5 ampliam a capacidade de conectar estratégia,
+            operação, processos e melhoria sem transformar o portfólio em uma
+            lista de promessas genéricas.
+          </p>
+        </div>
+        <div
+          className="consulting-capabilities-grid"
+          aria-label="Capacidades complementares de Consultoria em TI"
+        >
+          {consultingCapabilities.map(capability => (
+            <article key={capability.number}>
+              <span>{capability.number}</span>
+              <strong>{capability.title}</strong>
+              <p>{capability.description}</p>
+              <small>{capability.deliverable}</small>
+            </article>
+          ))}
         </div>
         <div className="route-service-layout services-detail-layout">
           <aside

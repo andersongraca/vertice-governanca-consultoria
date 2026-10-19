@@ -29,12 +29,12 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
         <Link
           className="brand"
           href="/"
-          aria-label="Vértice Governança de TI — início"
+          aria-label="Vértice Consultoria em TI e Governança — início"
         >
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>GOVERNANÇA DE TI</small>
+            <small>CONSULTORIA EM TI</small>
           </span>
         </Link>
 
@@ -88,7 +88,7 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
           <img src={LOGO_URL} alt="Símbolo Vértice" className="brand-mark" />
           <span className="brand-type">
             <strong>VÉRTICE</strong>
-            <small>GOVERNANÇA DE TI</small>
+            <small>CONSULTORIA EM TI</small>
           </span>
         </Link>
         <p>Menos ruído. Mais decisão. Execução controlada.</p>
