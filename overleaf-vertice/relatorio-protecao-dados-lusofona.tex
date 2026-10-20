@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{vertice-report}
+\begin{document}
+\VerticeCover{Proteção de dados}{\field{Mapa lusófono de requisitos e fluxos}}{\field{Brasil, Portugal, Angola, Moçambique e Cabo Verde}}{\field{Nome do cliente}}
+
+\section{Objetivo e escopo}
+\textbf{Objetivo:} \field{pergunta de decisão}. \\
+\textbf{Operação analisada:} \field{serviço/processo}. \\
+\textbf{Período e data de consulta:} \field{data}. \\
+\textbf{Limite:} este documento é uma análise técnica e operacional; a validação jurídica deve ocorrer com profissional habilitado na jurisdição aplicável.
+
+\section{Mapa de jurisdições}
+\begin{longtable}{P{2.1cm}P{2.8cm}P{3cm}Y P{2.2cm}}
+\toprule
+\textbf{País} & \textbf{Marco/autoridade a validar} & \textbf{Operação e titulares} & \textbf{Transferências e pontos de atenção} & \textbf{Status} \\
+\midrule
+Brasil & LGPD / ANPD & \field{escopo} & \field{fluxo/contrato} & \status{em análise} \\
+Portugal & RGPD / Lei n.º 58/2019 / CNPD & \field{escopo} & \field{fluxo/contrato} & \status{em análise} \\
+Angola & Lei n.º 22/11 / APD & \field{escopo} & \field{fluxo/contrato} & \status{em análise} \\
+Moçambique & quadro vigente a confirmar por setor e operação & \field{escopo} & \field{fluxo/contrato} & \status{monitorar} \\
+Cabo Verde & regime nacional / CNPD & \field{escopo} & \field{fluxo/contrato} & \status{em análise} \\
+\bottomrule
+\end{longtable}
+
+\section{Mapa do fluxo de dados}
+\begin{tabularx}{\textwidth}{P{2.2cm}Y P{3cm}P{3cm}}
+\toprule
+\textbf{Etapa} & \textbf{Descrição} & \textbf{Sistema/fornecedor} & \textbf{País e responsável} \\
+\midrule
+Origem & \field{onde o dado nasce} & \field{sistema} & \field{país/papel} \\
+Uso & \field{finalidade e operação} & \field{sistema} & \field{país/papel} \\
+Compartilhamento & \field{destinatário e contrato} & \field{fornecedor} & \field{país/papel} \\
+Armazenamento & \field{região e retenção} & \field{ambiente} & \field{país/papel} \\
+Eliminação & \field{critério e evidência} & \field{processo} & \field{país/papel} \\
+\bottomrule
+\end{tabularx}
+
+\section{Achados e recomendações}
+\subsection{P-001 — \field{título}}
+\textbf{Fato observado:} \field{fato}.\\
+\textbf{Risco técnico/operacional:} \field{risco}.\\
+\textbf{Fonte:} \field{E-xxx / URL / data de consulta}.\\
+\textbf{Recomendação:} \field{ação}.\\
+\textbf{Validação jurídica necessária:} \field{sim/não e escopo}.
+
+\section{Plano de ação}
+\begin{tabularx}{\textwidth}{P{1.2cm}Y P{2.4cm}P{2.1cm}P{1.8cm}P{1.7cm}}
+\toprule
+\textbf{ID} & \textbf{Ação} & \textbf{Responsável} & \textbf{Dependência} & \textbf{Prazo} & \textbf{Status} \\
+\midrule
+A-001 & \field{ação} & \field{área} & \field{jurídico/contrato/tecnologia} & \field{data} & \status{aberta} \\
+\bottomrule
+\end{tabularx}
+
+\section{Fontes oficiais}
+\begin{enumerate}
+  \item \field{órgão, título, URL e data de consulta}.
+  \item \field{órgão, título, URL e data de consulta}.
+\end{enumerate}
+
+\end{document}

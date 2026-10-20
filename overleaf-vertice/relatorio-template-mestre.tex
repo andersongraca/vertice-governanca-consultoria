@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{vertice-report}
+\begin{document}
+
+\VerticeCover{Relatório de consultoria}{\field{Título do relatório}}{\field{Subtítulo que resume a decisão}}{\field{Nome da organização}}
+
+\tableofcontents
+\clearpage
+
+\section{Sumário executivo}
+\begin{executivebox}
+\textbf{Situação observada:} \field{contexto em três a cinco linhas}.\\
+\textbf{Decisão apoiada:} \field{decisão que o cliente precisa tomar}.\\
+\textbf{Recomendação:} \field{recomendação executiva}.
+\end{executivebox}
+
+\section{Contexto, objetivo e escopo}
+\textbf{Contexto.} \field{por que o trabalho foi contratado}. \\
+\textbf{Objetivo.} \field{pergunta que este relatório responde}. \\
+\textbf{Escopo incluído.} \field{processos, serviços, sistemas, unidades e período}. \\
+\textbf{Fora de escopo.} \field{limitações e exclusões}.
+
+\section{Método e evidências}
+\field{Descreva entrevistas, workshops, análise documental, amostragem e critérios.}
+
+\begin{longtable}{P{1.2cm}P{5.5cm}P{2.4cm}P{2.0cm}Y}
+\toprule
+\textbf{ID} & \textbf{Evidência} & \textbf{Tipo} & \textbf{Data} & \textbf{Observação} \\
+\midrule
+E-001 & \field{documento ou entrevista} & \field{tipo} & \field{data} & \field{limitação ou validação} \\
+\bottomrule
+\end{longtable}
+
+\section{Achados}
+\subsection{A-001 — \field{título do achado}}
+\textbf{Critério:} \field{referência}. \\
+\textbf{Condição:} \field{o que foi encontrado}. \\
+\textbf{Evidência:} \field{E-001}. \\
+\textbf{Impacto/risco:} \field{efeito}. \\
+\textbf{Recomendação:} \field{ação objetiva}. \\
+\textbf{Prioridade:} \status{crítica / alta / média / baixa}.
+
+\section{Riscos e prioridades}
+\begin{tabularx}{\textwidth}{P{1.2cm}Y P{1.4cm}P{1.4cm}P{1.5cm}Y}
+\toprule
+\textbf{ID} & \textbf{Risco} & \textbf{Prob.} & \textbf{Impacto} & \textbf{Nível} & \textbf{Tratamento} \\
+\midrule
+R-001 & \field{risco principal} & \field{1--5} & \field{1--5} & \status{alto} & \field{ação e dono} \\
+\bottomrule
+\end{tabularx}
+
+\section{Roadmap e plano de ação}
+\begin{longtable}{P{1.2cm}Y P{3cm}P{2.3cm}P{2.0cm}P{1.8cm}}
+\toprule
+\textbf{ID} & \textbf{Ação} & \textbf{Resultado} & \textbf{Responsável} & \textbf{Prazo} & \textbf{Status} \\
+\midrule
+P-001 & \field{ação} & \field{resultado esperado} & \field{área} & \field{data} & \status{aberta} \\
+\bottomrule
+\end{longtable}
+
+\section{Conclusão e limites profissionais}
+\field{Síntese do estado, decisões e próximos passos.}
+
+Este relatório representa uma avaliação técnica e gerencial baseada no escopo, período e evidências indicados. Não constitui, por si só, certificação, auditoria independente, perícia, parecer jurídico ou garantia de conformidade.
+
+\end{document}

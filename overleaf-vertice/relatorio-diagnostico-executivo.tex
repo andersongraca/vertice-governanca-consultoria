@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{vertice-report}
+\begin{document}
+\VerticeCover{Diagnóstico executivo}{\field{Tema da avaliação}}{\field{Decisões, riscos e roteiro de implementação}}{\field{Nome do cliente}}
+
+\section{Sumário executivo}
+\begin{executivebox}
+\textbf{Situação atual:} \field{síntese}.\\
+\textbf{Decisão prioritária:} \field{decisão}.\\
+\textbf{Recomendação Vértice:} \field{recomendação}.\\
+\textbf{Horizonte:} 0--30 dias: \field{ação}; 31--90 dias: \field{ação}; 91--180 dias: \field{ação}.
+\end{executivebox}
+
+\section{Contexto e pergunta executiva}
+\textbf{Contexto do cliente:} \field{contexto}. \\
+\textbf{Pergunta que o diagnóstico responde:} \field{pergunta}. \\
+\textbf{Escopo:} \field{unidades, serviços, processos, sistemas e período}.
+
+\section{Avaliação por dimensão}
+\begin{longtable}{P{3.2cm}Y P{1.5cm}P{3.5cm}Y}
+\toprule
+\textbf{Dimensão} & \textbf{Pergunta de avaliação} & \textbf{Nível 0--5} & \textbf{Evidência} & \textbf{Lacuna} \\
+\midrule
+Estratégia & \field{há prioridades e investimento claros?} & \field{n} & \field{E-xxx} & \field{lacuna} \\
+Governança & \field{há papéis, fóruns e decisões?} & \field{n} & \field{E-xxx} & \field{lacuna} \\
+Processos & \field{o trabalho é repetível e mensurável?} & \field{n} & \field{E-xxx} & \field{lacuna} \\
+Pessoas & \field{há capacidade e conhecimento?} & \field{n} & \field{E-xxx} & \field{lacuna} \\
+Tecnologia e dados & \field{há confiabilidade e rastreabilidade?} & \field{n} & \field{E-xxx} & \field{lacuna} \\
+\bottomrule
+\end{longtable}
+
+\section{Achados críticos}
+\subsection{A-001 — \field{título}}
+\textbf{Condição:} \field{fato observado}.\\
+\textbf{Impacto:} \field{impacto}.\\
+\textbf{Evidência:} \field{E-xxx}.\\
+\textbf{Recomendação:} \field{ação}.
+
+\section{Plano de ação executivo}
+\begin{tabularx}{\textwidth}{P{1.1cm}Y P{3cm}P{2.4cm}P{2cm}P{1.6cm}}
+\toprule
+\textbf{ID} & \textbf{Ação} & \textbf{Resultado esperado} & \textbf{Dono} & \textbf{Prazo} & \textbf{Prioridade} \\
+\midrule
+P-001 & \field{ação} & \field{resultado} & \field{área} & \field{data} & \status{alta} \\
+\bottomrule
+\end{tabularx}
+
+\section{Limitações e próximos passos}
+\field{Limitações, dependências, decisão de continuidade e reunião de devolutiva.}
+
+\end{document}

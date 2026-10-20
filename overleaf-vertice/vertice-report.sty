@@ -1,0 +1,115 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vertice-report}[2026/10/20 Vértice report style]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{array}
+\RequirePackage{colortbl}
+\RequirePackage{enumitem}
+\RequirePackage{lastpage}
+\RequirePackage{hyperref}
+\RequirePackage{bookmark}
+\RequirePackage{ragged2e}
+
+\definecolor{verticepetrol}{HTML}{0C292D}
+\definecolor{verticeink}{HTML}{102528}
+\definecolor{verticeinksoft}{HTML}{41565A}
+\definecolor{verticepaper}{HTML}{F4F1E9}
+\definecolor{verticepaperdeep}{HTML}{E9E3D7}
+\definecolor{verticecopper}{HTML}{D3633B}
+\definecolor{verticecopperpale}{HTML}{EDC3A9}
+\definecolor{verticeline}{HTML}{C9C4B9}
+
+\geometry{a4paper, top=2.7cm, bottom=2.5cm, left=2.7cm, right=2.4cm, headheight=34pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlist{itemsep=0.25em, topsep=0.35em, leftmargin=1.4em}
+\renewcommand{\arraystretch}{1.28}
+\renewcommand{\familydefault}{\sfdefault}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=verticepetrol,
+  urlcolor=verticecopper,
+  citecolor=verticepetrol,
+  pdftitle={Relatório Vértice},
+  pdfauthor={Vértice Consultoria e Governança em TI},
+  pdfsubject={Relatório de consultoria},
+  bookmarksopen=true
+}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcommand{\field}[1]{\textcolor{verticecopper}{\textbf{\{#1\}}}}
+\newcommand{\status}[1]{\colorbox{verticepaperdeep}{\textcolor{verticepetrol}{\footnotesize\sffamily\bfseries\MakeUppercase{#1}}}}
+\newcommand{\sourceurl}[2]{\href{#1}{#2}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.85cm]{assets/mark.png}}\hspace{0.45em}\raisebox{0.08cm}{\begin{minipage}{0.48\textwidth}\scriptsize\textbf{VÉRTICE}\par\tiny CONSULTORIA E GOVERNANÇA EM TI\end{minipage}}}
+\fancyhead[R]{\raisebox{0.08cm}{\scriptsize\textcolor{verticeinksoft}{\field{tipo de relatório}}}}
+\fancyfoot[L]{\scriptsize\textcolor{verticeinksoft}{\field{cliente} · \field{projeto}}}
+\fancyfoot[R]{\scriptsize\textcolor{verticeinksoft}{\thepage\ / \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\makeatletter
+\renewcommand{\headrule}{\hbox to\headwidth{\color{verticecopper}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{verticeline}\leaders\hrule height \footrulewidth\hfill}}
+\makeatother
+
+\titleformat{\section}{\Large\bfseries\color{verticepetrol}}{}{0pt}{}[\vspace{0.25em}\color{verticecopper}\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{verticepetrol}}{}{0pt}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{verticecopper}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{2.2em}{0.9em}
+\titlespacing*{\subsection}{0pt}{1.4em}{0.45em}
+
+\newcommand{\VerticeCover}[4]{%
+  \thispagestyle{empty}%
+  \vspace*{0.7cm}
+  \noindent\color{verticecopper}\rule{\textwidth}{2pt}\par
+  \vspace{1.0cm}
+  \noindent\begin{minipage}[t]{0.72\textwidth}
+    \includegraphics[height=1.25cm]{assets/mark.png}\hspace{0.5em}
+    \raisebox{0.22cm}{\begin{minipage}{0.6\textwidth}\Large\textbf{VÉRTICE}\par\scriptsize CONSULTORIA E GOVERNANÇA EM TI\end{minipage}}
+  \end{minipage}\par
+  \vfill
+  {\color{verticecopper}\sffamily\bfseries\small\MakeUppercase{#1}}\par\vspace{0.45cm}
+  {\color{verticepetrol}\Huge\bfseries #2}\par\vspace{0.55cm}
+  {\color{verticeinksoft}\Large #3}\par
+  \vspace{1.2cm}\color{verticecopper}\rule{0.24\textwidth}{1.5pt}\par
+  \vfill
+  \begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Y@{}}
+    \textbf{Cliente} & #4 \\
+    \textbf{Data-base} & \field{dd/mm/aaaa} \\
+    \textbf{Versão} & \field{v1.0} \\
+    \textbf{Status} & \status{rascunho / em revisão / final} \\
+    \textbf{Classificação} & \field{público / uso interno / confidencial}
+  \end{tabularx}
+  \vspace{0.8cm}
+  \begin{center}\scriptsize\textcolor{verticeinksoft}{Menos ruído. Mais decisão. Execução controlada.}\end{center}
+  \clearpage
+}
+
+\newenvironment{executivebox}{%
+  \begin{center}
+  \begin{minipage}{0.94\textwidth}
+  \color{verticepetrol}\rule{\textwidth}{1.2pt}\par\vspace{0.35em}
+  \small\setlength{\parindent}{0pt}
+}{%
+  \vspace{0.35em}\par\color{verticecopper}\rule{\textwidth}{1.2pt}\par
+  \end{minipage}
+  \end{center}
+}
+
+\newcommand{\reporttablehead}[1]{\rowcolor{verticepetrol}\color{white}\textbf{#1}}
+\AtBeginDocument{\color{verticeink}\urlstyle{same}}

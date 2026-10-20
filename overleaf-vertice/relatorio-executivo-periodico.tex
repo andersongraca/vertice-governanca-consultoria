@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{vertice-report}
+\begin{document}
+\VerticeCover{Relatório executivo}{\field{Acompanhamento periódico}}{\field{Indicadores, decisões, riscos e próximos passos}}{\field{Nome do cliente}}
+
+\section{Mensagem executiva}
+\begin{executivebox}
+\field{Em um parágrafo, descreva o que mudou no período, o que está em risco e qual decisão precisa ser tomada.}
+\end{executivebox}
+
+\section{Indicadores}
+\begin{tabularx}{\textwidth}{P{4cm}P{2cm}P{2cm}P{2cm}Y}
+\toprule
+\textbf{Indicador} & \textbf{Meta} & \textbf{Realizado} & \textbf{Tendência} & \textbf{Comentário} \\
+\midrule
+\field{indicador} & \field{meta} & \field{valor} & \field{subindo/estável/caindo} & \field{comentário} \\
+\bottomrule
+\end{tabularx}
+
+\section{Entregas do período}
+\begin{itemize}
+  \item \field{entrega 1 e evidência};
+  \item \field{entrega 2 e evidência};
+  \item \field{entrega 3 e evidência}.
+\end{itemize}
+
+\section{Riscos e decisões}
+\begin{tabularx}{\textwidth}{P{1.2cm}Y P{2.4cm}P{2.5cm}P{2cm}}
+\toprule
+\textbf{ID} & \textbf{Risco ou decisão} & \textbf{Impacto} & \textbf{Ação/dono} & \textbf{Data limite} \\
+\midrule
+R-001 & \field{risco ou decisão} & \status{alto} & \field{ação e responsável} & \field{data} \\
+\bottomrule
+\end{tabularx}
+
+\section{Próximo ciclo}
+\field{Prioridades, reuniões, entregáveis e decisões esperadas para o próximo período.}
+
+\end{document}

@@ -166,3 +166,12 @@
 - [x] Criar templates de maturidade de processos e pessoas, governança de dados, projetos e portfólio, aquisições e contratos, segurança/confiabilidade e conhecimento organizacional.
 - [x] Criar template de relatório executivo periódico, checklist de qualidade e convenção de pastas/arquivos.
 - [x] Remover o documento administrativo de CMS criado por interpretação incorreta; esta frente passa a tratar somente de relatórios de consultoria.
+
+
+## Entrega — Templates profissionais para Overleaf
+
+- [x] Criar pacote LaTeX com identidade visual da Vértice, capa, cabeçalho, rodapé, cores e paginação.
+- [x] Incluir a marca gráfica da Vértice em formato PNG compatível com pdfLaTeX/Overleaf.
+- [x] Criar templates de diagnóstico executivo, governança de IA/ISO 42001, proteção de dados lusófona, gap ISO 27001/27701, maturidade e relatório executivo periódico.
+- [x] Incluir template mestre, README de uso, convenção de arquivos e organização de pastas.
+- [x] Empacotar o material em `overleaf-vertice.zip`.
