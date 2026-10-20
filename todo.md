@@ -156,3 +156,13 @@
 - [x] Incluir acesso discreto à Área editorial no rodapé.
 - [ ] Conectar login Manus OAuth, autorização de administradores, banco de dados e publicação real quando o backend for colocado no servidor.
 - [x] Validar e publicar o painel de preparação no GitHub Pages.
+
+
+## Entrega — Templates de relatórios de consultoria
+
+- [x] Criar padrão único de capa, controle de versões, escopo, método, evidências, achados, riscos, roadmap e conclusão.
+- [x] Criar template de diagnóstico executivo.
+- [x] Criar templates específicos para ITIL Version 5 e gestão de serviços, governança de IA/ISO 42001, proteção de dados lusófona e ISO/IEC 27001/27701.
+- [x] Criar templates de maturidade de processos e pessoas, governança de dados, projetos e portfólio, aquisições e contratos, segurança/confiabilidade e conhecimento organizacional.
+- [x] Criar template de relatório executivo periódico, checklist de qualidade e convenção de pastas/arquivos.
+- [x] Remover o documento administrativo de CMS criado por interpretação incorreta; esta frente passa a tratar somente de relatórios de consultoria.
