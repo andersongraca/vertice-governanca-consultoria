@@ -155,4 +155,4 @@
 - [x] Manter os artigos públicos atuais independentes dos rascunhos locais e bloquear a indexação do painel.
 - [x] Incluir acesso discreto à Área editorial no rodapé.
 - [ ] Conectar login Manus OAuth, autorização de administradores, banco de dados e publicação real quando o backend for colocado no servidor.
-- [ ] Validar e publicar o painel de preparação no GitHub Pages.
+- [x] Validar e publicar o painel de preparação no GitHub Pages.
