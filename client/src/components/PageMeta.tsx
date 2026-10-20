@@ -33,6 +33,7 @@ type PageMetaProps = {
   description: string;
   path?: string;
   type?: "website" | "article";
+  noIndex?: boolean;
 };
 
 export default function PageMeta({
@@ -40,6 +41,7 @@ export default function PageMeta({
   description,
   path = "/",
   type = "website",
+  noIndex = false,
 }: PageMetaProps) {
   useEffect(() => {
     const canonicalUrl = `${PUBLIC_ORIGIN}${path === "/" ? "/" : path}`;
@@ -55,8 +57,9 @@ export default function PageMeta({
     upsertMeta("twitter:title", title, false);
     upsertMeta("twitter:description", description, false);
     upsertMeta("twitter:image", `${PUBLIC_ORIGIN}/favicon.svg`, false);
+    upsertMeta("robots", noIndex ? "noindex, nofollow" : "index, follow");
     upsertLink("canonical", canonicalUrl);
-  }, [description, path, title, type]);
+  }, [description, noIndex, path, title, type]);
 
   return null;
 }

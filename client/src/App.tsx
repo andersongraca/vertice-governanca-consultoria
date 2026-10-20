@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Contato from "@/pages/Contato";
 import Diagnostico from "@/pages/Diagnostico";
+import EditorialPanel from "@/pages/EditorialPanel";
 import Home from "./pages/Home";
 import Metodo from "./pages/Metodo";
 import Privacidade from "./pages/Privacidade";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/metodo" component={Metodo} />
       <Route path="/socios" component={Socios} />
       <Route path="/contato" component={Contato} />
+      <Route path="/painel-editorial" component={EditorialPanel} />
       <Route path="/diagnostico" component={Diagnostico} />
       <Route path="/protecao-dados" component={ProtecaoDados} />
       <Route path="/privacidade" component={Privacidade} />

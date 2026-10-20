@@ -98,6 +98,7 @@ export default function SiteChrome({ children, active }: SiteChromeProps) {
           <ContactChannels />
           <div className="footer-legal">
             <Link href="/privacidade">Privacidade e uso adequado</Link>
+            <Link href="/painel-editorial">Área editorial</Link>
             <span>© {new Date().getFullYear()} Vértice Consultoria</span>
           </div>
         </div>

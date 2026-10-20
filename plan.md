@@ -31,6 +31,7 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
 - `client/src/pages/BlogPost.tsx`: rota `/blog/:slug`, com leitura individual, índice visual, blocos editoriais e links para outros artigos/diagnóstico.
 - `client/src/pages/ProtecaoDados.tsx`: página `/protecao-dados` com mapa comparativo de jurisdições, aviso de limites profissionais, fontes oficiais e CTA para diagnóstico técnico.
+- `client/src/pages/EditorialPanel.tsx` e `client/src/lib/editorialDrafts.ts`: área editorial em modo de preparação, com rascunhos locais, edição, prévia e avisos explícitos de que login, banco e publicação pública serão conectados em etapa posterior.
 - `client/src/components/SiteChrome.tsx` e `client/src/pages/Home.tsx`: navegação atualizada para Serviços, Blog e Proteção de Dados, mantendo o acesso às páginas existentes.
 - `client/src/App.tsx`: manifestação das novas rotas estáticas e da rota dinâmica de artigos.
 - `client/public/manus-routes.json`: declaração de rotas públicas para a camada de publicação/descoberta.
@@ -74,8 +75,9 @@ O site já possui o movimento visual **Horizonte de Controle**, portanto a nova 
 - `/blog` — hub editorial.
 - `/blog/:slug` — artigo individual.
 - `/protecao-dados` — mapa comparativo de proteção de dados lusófona.
+- `/painel-editorial` — área de preparação de rascunhos, fora do sitemap e impedida de indexação enquanto não há autenticação e backend publicados.
 - `/metodo`, `/socios`, `/diagnostico`, `/privacidade` — páginas existentes preservadas.
 
 ## Entrega e publicação
 
-A implementação será validada com `pnpm check` e `pnpm build`. Depois, as alterações serão commitadas no branch `main`, enviadas ao repositório GitHub selecionado e a saída de produção será sincronizada no branch `gh-pages`, que atende ao endereço público informado.
+A implementação será validada com `pnpm check` e `pnpm build`. Depois, as alterações serão commitadas no branch `main`, enviadas ao repositório GitHub selecionado e a saída de produção será sincronizada no branch `gh-pages`, que atende ao endereço público informado. A etapa seguinte, quando autorizada, conecta a área editorial a servidor, banco, autenticação e permissões reais.

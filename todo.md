@@ -145,3 +145,14 @@
 - [x] Manter somente o bloco separado “Prefere começar direto?” com o botão “Abrir WhatsApp”.
 - [x] Centralizar as áreas compartilhadas entre `/diagnostico` e `/contato`.
 - [x] Publicar a correção no GitHub Pages.
+
+
+## Entrega — Painel editorial em modo de preparação
+
+- [x] Criar a rota `/painel-editorial` para elaborar e revisar rascunhos do Blog sem criar senhas ou login nesta etapa.
+- [x] Permitir criar, editar, salvar, marcar como pronto, visualizar e excluir rascunhos apenas no navegador atual.
+- [x] Exibir avisos de alterações não salvas, limitação de armazenamento local, uso adequado de dados e ausência de publicação no Blog público.
+- [x] Manter os artigos públicos atuais independentes dos rascunhos locais e bloquear a indexação do painel.
+- [x] Incluir acesso discreto à Área editorial no rodapé.
+- [ ] Conectar login Manus OAuth, autorização de administradores, banco de dados e publicação real quando o backend for colocado no servidor.
+- [ ] Validar e publicar o painel de preparação no GitHub Pages.
