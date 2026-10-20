@@ -144,4 +144,4 @@
 - [x] Replicar o formulário de diagnóstico: etapas, campos obrigatórios, antispam, aviso de privacidade e mensagem para copiar e encaminhar por e-mail.
 - [x] Manter somente o bloco separado “Prefere começar direto?” com o botão “Abrir WhatsApp”.
 - [x] Centralizar as áreas compartilhadas entre `/diagnostico` e `/contato`.
-- [ ] Publicar a correção no GitHub Pages.
+- [x] Publicar a correção no GitHub Pages.
