@@ -124,7 +124,7 @@
 
 - [x] Fazer o X do WhatsApp ocultar o botão somente até o recarregamento da página.
 - [x] Adicionar o ícone do WhatsApp aos canais sociais do rodapé.
-- [x] Criar a página `/contato` com conteúdo comercial e formulário de propostas integrado ao WhatsApp.
+- [x] Criar a página `/contato` com o formulário de diagnóstico por e-mail e o bloco separado “Prefere começar direto?” para o WhatsApp.
 - [x] Adicionar Portugal, Angola, Moçambique e Cabo Verde em uma seção dedicada da Home.
 - [x] Conectar a seção à página comparativa de proteção de dados, fontes e limites jurídicos.
 - [x] Validar e publicar a nova página, navegação e seção lusófona.
@@ -136,3 +136,12 @@
 - [x] Atualizar o título para “Conformidade em cinco países”.
 - [x] Ajustar o grid responsivo para apresentar os cinco contextos.
 - [x] Publicar a correção no GitHub Pages.
+
+
+## Ajuste — Contato alinhado ao diagnóstico por e-mail
+
+- [x] Remover o título e o fluxo “Solicitar proposta comercial” da página `/contato`.
+- [x] Replicar o formulário de diagnóstico: etapas, campos obrigatórios, antispam, aviso de privacidade e mensagem para copiar e encaminhar por e-mail.
+- [x] Manter somente o bloco separado “Prefere começar direto?” com o botão “Abrir WhatsApp”.
+- [x] Centralizar as áreas compartilhadas entre `/diagnostico` e `/contato`.
+- [ ] Publicar a correção no GitHub Pages.

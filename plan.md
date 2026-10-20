@@ -25,7 +25,7 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/lib/consultingCapabilities.ts`: quatro capacidades transversais sustentadas pela especialização e pelo ITIL Version 5 — estratégia e investimento; processos, qualidade e transformação; governança de IA; pessoas, conhecimento e mudança.
 - `client/src/lib/blogPosts.ts`: três artigos detalhados sobre a intersecção entre ITIL Version 5, ISO/IEC 42001, LGPD/RGPD e privacidade em países de língua portuguesa, com fontes oficiais exibidas no artigo.
 - `client/src/components/FloatingActions.tsx`: ações globais de voltar ao topo e WhatsApp, com fechamento válido durante a sessão e link direto para o número comercial oficial.
-- `client/src/pages/Contato.tsx`: formulário de propostas comerciais que prepara uma mensagem estruturada e abre o WhatsApp oficial.
+- `client/src/pages/Contato.tsx`: formulário de diagnóstico por e-mail, com etapas, antispam, aviso de privacidade, cópia da mensagem e bloco separado para iniciar direto no WhatsApp.
 - `client/src/components/PageMeta.tsx`: metadados de rota no cliente (título, descrição, canonical, Open Graph e Twitter Card) para Serviços, Blog e artigos.
 - `client/src/pages/Services.tsx`: rota `/servicos` posicionada como Consultoria em TI, Governança e Gestão, com navegação lateral/interativa entre as dez frentes, capacidades complementares, seção de casos de aplicação, limites profissionais e CTA para diagnóstico; `/atuacao` permanece como alias compatível.
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.

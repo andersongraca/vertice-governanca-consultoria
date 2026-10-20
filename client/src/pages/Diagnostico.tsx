@@ -4,10 +4,9 @@ import { FormEvent, useMemo, useState } from "react";
 import { Link, useSearch } from "wouter";
 import SiteChrome from "@/components/SiteChrome";
 import { Checkbox } from "@/components/ui/checkbox";
+import { diagnosticAreas } from "@/lib/diagnosticContent";
 
 type Brief = { nome: string; empresa: string; email: string; area: string; contexto: string };
-
-const areas = ["Gestão de Serviços de Tecnologia da Informação", "Gestão de Projetos e Programas em Tecnologia da Informação", "Alinhamento dos processos estratégicos de negócio com a TIC", "Gestão do conhecimento consolidado na cultura organizacional", "Gestão de Segurança e Confiabilidade de Recursos Tecnológicos", "Gestão de Dados para decisões confiáveis", "Gestão de Aquisições e Contratos de TIC", "Arquitetura Organizacional baseada em maturidade", "Governança e implementação ISO/IEC 27001 e ISO/IEC 27701", "Governança de Privacidade e Dados para operações lusófonas"];
 
 export default function Diagnostico() {
   const search = useSearch();
@@ -58,7 +57,7 @@ export default function Diagnostico() {
               <label>Seu nome *<input required name="nome" placeholder="Como podemos chamar você?" /></label>
               <label>Empresa *<input required name="empresa" placeholder="Nome da empresa" /></label>
               <label>E-mail de contato *<input required type="email" name="email" placeholder="voce@empresa.com.br" /></label>
-              <label>Qual desafio você quer priorizar? *<select required name="area" defaultValue={defaultArea}><option value="" disabled>Selecione uma frente</option>{areas.map((area) => <option key={area}>{area}</option>)}</select></label>
+              <label>Qual desafio você quer priorizar? *<select required name="area" defaultValue={defaultArea}><option value="" disabled>Selecione uma frente</option>{diagnosticAreas.map((area) => <option key={area}>{area}</option>)}</select></label>
               <label className="form-full">O que está perdendo força hoje?<textarea name="contexto" placeholder="Ex.: temos muitos projetos concorrendo por atenção e pouca previsibilidade de entrega." rows={4} /></label>
               <label className="form-honeypot" aria-hidden="true">Não preencha este campo<input name="website" tabIndex={-1} autoComplete="off" /></label>
               <div className="form-notice form-full"><ShieldCheck size={17} /><p>Use este formulário somente para uma solicitação comercial. Não compartilhe senhas, dados bancários, acessos ou informações sigilosas.</p></div>

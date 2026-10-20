@@ -993,3 +993,18 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
   .contact-privacy-callout { grid-template-columns: 1fr; padding: 62px 7vw; }
   .contact-privacy-callout .route-callout-link { grid-column: auto; }
 }
+
+
+.contact-direct-section { display: grid; grid-template-columns: 1.1fr .7fr auto; align-items: center; gap: 48px; padding: 73px 8vw; background: var(--petrol); color: var(--paper); }
+.contact-direct-section h2 { max-width: 720px; margin: 15px 0 0; font-size: clamp(2.4rem, 4vw, 4.6rem); line-height: .93; }
+.contact-direct-section h2 em { color: var(--copper-pale); }
+.contact-direct-section > p { margin: 0; color: rgba(244,241,233,.7); font-size: 14px; line-height: 1.7; }
+.contact-direct-section .route-callout-link { color: var(--paper); white-space: nowrap; }
+@media (max-width: 900px) {
+  .contact-direct-section { grid-template-columns: 1fr 1fr; gap: 25px 42px; }
+  .contact-direct-section .route-callout-link { grid-column: 1 / -1; justify-self: start; }
+}
+@media (max-width: 580px) {
+  .contact-direct-section { grid-template-columns: 1fr; padding: 62px 7vw; }
+  .contact-direct-section .route-callout-link { grid-column: auto; }
+}

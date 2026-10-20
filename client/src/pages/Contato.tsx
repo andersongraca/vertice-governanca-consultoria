@@ -1,286 +1,327 @@
-/** DESIGN — Contato: transformar contexto executivo em conversa comercial objetiva. */
-import { FormEvent, useState } from "react";
-import { ArrowRight, Check, MessageCircle, ShieldCheck } from "lucide-react";
-import { Link } from "wouter";
+/** DESIGN — Contato: o mesmo primeiro passo do diagnóstico, com um atalho direto ao WhatsApp. */
+import {
+  ArrowRight,
+  Check,
+  Copy,
+  FileText,
+  MessageCircle,
+  ShieldCheck,
+  X,
+} from "lucide-react";
+import { FormEvent, useMemo, useState } from "react";
+import { Link, useSearch } from "wouter";
 import PageMeta from "@/components/PageMeta";
 import SiteChrome from "@/components/SiteChrome";
+import { Checkbox } from "@/components/ui/checkbox";
 import { WHATSAPP_URL } from "@/components/ContactChannels";
+import { diagnosticAreas } from "@/lib/diagnosticContent";
 
-const proposalOptions = [
-  "Diagnóstico executivo de Governança, Projetos e Dados",
-  "Governança de IA e implementação ISO/IEC 42001",
-  "Privacidade e conformidade de dados lusófona",
-  "Programa integrado de Governança de IA e Dados",
-  "Gestão de Serviços e ITIL Version 5",
-  "Outro escopo de Consultoria em TI",
-];
-
-const jurisdictionOptions = [
-  "Brasil",
-  "Portugal",
-  "Angola",
-  "Moçambique",
-  "Cabo Verde",
-  "Mais de um país lusófono",
-  "Ainda estou definindo",
-];
+type Brief = {
+  nome: string;
+  empresa: string;
+  email: string;
+  area: string;
+  contexto: string;
+};
 
 export default function Contato() {
-  const [submitted, setSubmitted] = useState(false);
+  const search = useSearch();
+  const defaultArea = new URLSearchParams(search).get("area") ?? "";
+  const [brief, setBrief] = useState<Brief | null>(null);
+  const [copied, setCopied] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [antiSpamError, setAntiSpamError] = useState("");
+  const [formStartedAt] = useState(() => Date.now());
 
-  function submitProposal(event: FormEvent<HTMLFormElement>) {
+  const message = useMemo(() => {
+    if (!brief) return "";
+    return `Olá, Vértice.\n\nMeu nome é ${brief.nome}, da ${brief.empresa}.\n\nQuero conversar sobre: ${brief.area}.\n\nContexto inicial: ${brief.contexto || "a ser detalhado na conversa"}.\n\nMeu melhor e-mail para retorno é ${brief.email}.\n\nGostaria de iniciar o Diagnóstico Executivo de 30 dias.`;
+  }, [brief]);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const message = [
-      "Olá, Vértice! Gostaria de conversar sobre uma proposta comercial.",
-      "",
-      `Nome: ${String(form.get("nome") || "")}`,
-      `Empresa: ${String(form.get("empresa") || "")}`,
-      `E-mail: ${String(form.get("email") || "")}`,
-      `País ou jurisdição: ${String(form.get("jurisdicao") || "")}`,
-      `Escopo de interesse: ${String(form.get("proposta") || "")}`,
-      "",
-      "Contexto e objetivo:",
-      String(form.get("contexto") || ""),
-      "",
-      "Solicito uma conversa inicial para dimensionar escopo, prazo e investimento.",
-    ].join("\n");
+    const data = new FormData(event.currentTarget);
+    const website = String(data.get("website") ?? "");
+    const verification = String(data.get("verification") ?? "").trim();
+    if (
+      website ||
+      verification !== "8" ||
+      !consent ||
+      Date.now() - formStartedAt < 2200
+    ) {
+      setAntiSpamError(
+        "Confirme a verificação antispam e o aviso de privacidade antes de prosseguir."
+      );
+      return;
+    }
+    setAntiSpamError("");
+    setBrief({
+      nome: String(data.get("nome")),
+      empresa: String(data.get("empresa")),
+      email: String(data.get("email")),
+      area: String(data.get("area")),
+      contexto: String(data.get("contexto")),
+    });
+    setCopied(false);
+  }
 
-    const whatsappLink = new URL(WHATSAPP_URL);
-    whatsappLink.searchParams.set("text", message);
-    window.open(whatsappLink.toString(), "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+  async function copyMessage() {
+    if (!message) return;
+    try {
+      await navigator.clipboard.writeText(message);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
   }
 
   return (
     <SiteChrome active="contato">
       <PageMeta
-        title="Contato e propostas comerciais | Vértice"
-        description="Solicite uma conversa sobre governança de IA, ITIL Version 5, proteção de dados e propostas comerciais para operações lusófonas."
+        title="Contato e diagnóstico executivo | Vértice"
+        description="Solicite uma conversa de diagnóstico sobre governança de TI, serviços, IA, dados e privacidade lusófona."
         path="/contato"
       />
-      <section className="route-hero route-hero-dark contact-hero">
+      <section className="route-hero route-hero-dark diagnostic-route-hero">
         <div className="route-kicker">
-          <span>08</span> Contato e propostas
+          <span>08</span> Contato
         </div>
         <div className="route-hero-grid">
           <div>
             <div className="eyebrow eyebrow-light">
-              <span /> Uma conversa começa pelo contexto
+              <span /> Primeiro passo
             </div>
             <h1>
-              Vamos transformar
+              Uma conversa
               <br />
-              <em>complexidade em proposta.</em>
+              com <em>direção.</em>
             </h1>
           </div>
           <p>
-            Conte o que precisa ser governado, em quais países a operação
-            acontece e qual decisão a liderança precisa tomar. A primeira
-            mensagem já chega organizada ao WhatsApp da Vértice.
+            Conte o que está perdendo força hoje. Organizaremos uma primeira
+            conversa de diagnóstico com contexto, prioridade e próximo passo.
           </p>
         </div>
       </section>
 
-      <main className="contact-page-main">
-        <section className="route-section contact-form-section">
-          <div className="contact-layout">
-            <aside className="contact-copy">
+      <section className="route-section diagnostic-route-section">
+        {!brief ? (
+          <div className="diagnostic-form-layout">
+            <aside className="diagnostic-route-intro">
               <div className="eyebrow">
-                <span /> O que podemos estruturar
+                <span /> Rota de decisão
               </div>
               <h2>
-                Uma proposta começa com <em>perguntas certas.</em>
+                Solicite uma conversa
+                <br />
+                <em>de diagnóstico.</em>
               </h2>
-              <p>
-                O formulário não substitui a conversa. Ele organiza o primeiro
-                contexto para que a Vértice consiga indicar o escopo mais
-                adequado, sem presumir uma solução antes de entender o risco.
+              <p className="diagnostic-route-label">
+                Do contexto à próxima decisão
               </p>
-              <ul className="contact-offer-list">
+              <ol>
                 <li>
-                  <Check size={17} /> Governança de IA e ISO/IEC 42001
+                  <span>01</span>Você compartilha o desafio.
                 </li>
                 <li>
-                  <Check size={17} /> ITIL Version 5 e gestão de serviços
+                  <span>02</span>Nós organizamos a conversa inicial.
                 </li>
                 <li>
-                  <Check size={17} /> LGPD, RGPD e privacidade lusófona
+                  <span>03</span>Alinhamos escopo, pessoas e próximos passos.
                 </li>
-                <li>
-                  <Check size={17} /> Dados, projetos, processos e contratos
-                </li>
-              </ul>
-              <div className="contact-direct-card">
-                <MessageCircle size={20} />
+              </ol>
+            </aside>
+            <form className="diagnostic-page-form" onSubmit={handleSubmit}>
+              <div className="form-heading">
+                <FileText size={21} />
                 <div>
-                  <strong>Prefere começar direto?</strong>
-                  <p>Abra o WhatsApp e escreva para a equipe comercial.</p>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                    Abrir WhatsApp <ArrowRight size={15} />
-                  </a>
+                  <strong>Solicite uma conversa de diagnóstico</strong>
+                  <span>Campos com asterisco são obrigatórios.</span>
                 </div>
               </div>
-            </aside>
-
-            <form className="contact-proposal-form" onSubmit={submitProposal}>
-              <div className="contact-form-heading">
-                <ShieldCheck size={19} />
-                <div>
-                  <strong>Solicitar proposta comercial</strong>
-                  <span>A mensagem será preparada no seu WhatsApp.</span>
-                </div>
+              <div
+                className="diagnostic-stage-track"
+                aria-label="Etapas do diagnóstico"
+              >
+                <span>Rota do diagnóstico</span>
+                <ol>
+                  <li className="is-current">
+                    <b>01</b> Contexto
+                  </li>
+                  <li>
+                    <b>02</b> Conversa
+                  </li>
+                  <li>
+                    <b>03</b> Próximo passo
+                  </li>
+                </ol>
               </div>
               <label>
-                Nome
+                Seu nome *
                 <input
-                  name="nome"
                   required
+                  name="nome"
                   placeholder="Como podemos chamar você?"
                 />
               </label>
               <label>
-                Empresa
-                <input
-                  name="empresa"
-                  required
-                  placeholder="Nome da organização"
-                />
+                Empresa *
+                <input required name="empresa" placeholder="Nome da empresa" />
               </label>
               <label>
-                E-mail
+                E-mail de contato *
                 <input
+                  required
                   type="email"
                   name="email"
-                  required
                   placeholder="voce@empresa.com.br"
                 />
               </label>
               <label>
-                País ou jurisdição principal
-                <select name="jurisdicao" required defaultValue="">
+                Qual desafio você quer priorizar? *
+                <select required name="area" defaultValue={defaultArea}>
                   <option value="" disabled>
-                    Selecione uma opção
+                    Selecione uma frente
                   </option>
-                  {jurisdictionOptions.map(option => (
-                    <option key={option}>{option}</option>
+                  {diagnosticAreas.map(area => (
+                    <option key={area}>{area}</option>
                   ))}
                 </select>
               </label>
               <label className="form-full">
-                Escopo de interesse
-                <select name="proposta" required defaultValue="">
-                  <option value="" disabled>
-                    Selecione uma proposta
-                  </option>
-                  {proposalOptions.map(option => (
-                    <option key={option}>{option}</option>
-                  ))}
-                </select>
-              </label>
-              <label className="form-full">
-                Contexto e objetivo
+                O que está perdendo força hoje?
                 <textarea
                   name="contexto"
-                  required
-                  rows={6}
-                  placeholder="O que motivou a conversa? Há prazo, auditoria, novo serviço, incidente ou expansão para outro país?"
+                  placeholder="Ex.: temos muitos projetos concorrendo por atenção e pouca previsibilidade de entrega."
+                  rows={4}
                 />
               </label>
-              <label className="contact-consent form-full">
-                <input type="checkbox" required />
-                <span>
-                  Concordo em usar estes dados apenas para o contato comercial
-                  solicitado e não enviarei senhas, dados bancários ou
-                  informações sigilosas.
-                </span>
+              <label className="form-honeypot" aria-hidden="true">
+                Não preencha este campo
+                <input name="website" tabIndex={-1} autoComplete="off" />
               </label>
-              <div className="contact-form-actions form-full">
-                <button className="primary-cta" type="submit">
-                  Preparar mensagem no WhatsApp <ArrowRight size={17} />
-                </button>
-                {submitted && (
-                  <span className="contact-sent-note">
-                    <Check size={15} /> Mensagem preparada. Confirme o envio no
-                    WhatsApp.
+              <div className="form-notice form-full">
+                <ShieldCheck size={17} />
+                <p>
+                  Use este formulário somente para uma solicitação comercial.
+                  Não compartilhe senhas, dados bancários, acessos ou
+                  informações sigilosas.
+                </p>
+              </div>
+              <div className="form-verification form-full">
+                <label>
+                  Verificação antispam: quanto é 5 + 3? *
+                  <input
+                    required
+                    name="verification"
+                    inputMode="numeric"
+                    placeholder="Resposta"
+                  />
+                </label>
+                <label className="consent-check">
+                  <Checkbox
+                    checked={consent}
+                    onCheckedChange={checked => setConsent(checked === true)}
+                    aria-label="Concordo com o aviso de privacidade"
+                  />
+                  <span>
+                    Li o{" "}
+                    <Link href="/privacidade">
+                      aviso de privacidade e uso adequado
+                    </Link>{" "}
+                    e concordo com o uso das informações para retorno comercial.
                   </span>
+                </label>
+                {antiSpamError && (
+                  <p className="form-error" role="alert">
+                    {antiSpamError}
+                  </p>
                 )}
               </div>
-              <small className="contact-form-note form-full">
-                A Vértice presta apoio técnico e gerencial. Pareceres,
-                interpretação jurídica, notificações e representação perante
-                autoridades dependem de profissional habilitado na jurisdição
-                aplicável.
-              </small>
+              <div className="diagnostic-action-row form-full">
+                <span>
+                  <i /> Etapa 01 · Registro do contexto
+                </span>
+                <button className="primary-cta" type="submit">
+                  Organizar meu ponto de partida <ArrowRight size={17} />
+                </button>
+              </div>
             </form>
           </div>
-        </section>
-
-        <section className="contact-process-section">
-          <div className="section-heading">
+        ) : (
+          <div className="diagnostic-ready-page">
+            <div className="ready-flag">
+              <Check size={23} />
+            </div>
             <div>
               <div className="eyebrow">
-                <span /> Depois da mensagem
+                <span /> Solicitação preparada
               </div>
               <h2>
-                Clareza antes
+                Sua conversa começa
                 <br />
-                <em>do contrato.</em>
+                <em>com mais clareza.</em>
               </h2>
+              <p>
+                Copie a mensagem abaixo e encaminhe para o e-mail comercial da
+                Vértice quando ele estiver configurado.
+              </p>
+              <pre>{message}</pre>
+              <div className="ready-actions">
+                <button
+                  className="primary-cta"
+                  type="button"
+                  onClick={copyMessage}
+                >
+                  {copied ? (
+                    <>
+                      <Check size={17} /> Mensagem copiada
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={17} /> Copiar mensagem
+                    </>
+                  )}
+                </button>
+                <button
+                  className="route-secondary-button"
+                  type="button"
+                  onClick={() => {
+                    setBrief(null);
+                    setCopied(false);
+                  }}
+                >
+                  Editar solicitação <X size={16} />
+                </button>
+              </div>
             </div>
-            <p>
-              A primeira conversa serve para confirmar contexto, fronteiras e
-              próximos passos. Não empurramos um pacote antes de entender a
-              decisão que precisa ser sustentada.
-            </p>
           </div>
-          <div className="contact-process-grid">
-            <article>
-              <span>01</span>
-              <strong>Qualificar</strong>
-              <p>
-                Entendemos países, serviços, dados, IA, fornecedores, prazos e
-                stakeholders.
-              </p>
-            </article>
-            <article>
-              <span>02</span>
-              <strong>Dimensionar</strong>
-              <p>
-                Definimos escopo, entregáveis, dependências, participação
-                jurídica e critérios de aceite.
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <strong>Propor</strong>
-              <p>
-                Enviamos uma proposta comercial com cronograma, investimento,
-                limites e forma de decisão.
-              </p>
-            </article>
-          </div>
-        </section>
+        )}
+      </section>
 
-        <section className="contact-privacy-callout">
-          <div>
-            <div className="eyebrow eyebrow-light">
-              <span /> Trilha lusófona
-            </div>
-            <h2>
-              Portugal, Angola, Moçambique e Cabo Verde exigem{" "}
-              <em>contexto local.</em>
-            </h2>
+      <section className="contact-direct-section">
+        <div>
+          <div className="eyebrow eyebrow-light">
+            <span /> Prefere começar direto?
           </div>
-          <p>
-            Organizamos fluxos, papéis, contratos, transferências, incidentes e
-            evidências sem presumir que uma lei substitui a outra.
-          </p>
-          <Link className="route-callout-link" href="/protecao-dados">
-            Ver mapa de proteção de dados <ArrowRight size={16} />
-          </Link>
-        </section>
-      </main>
+          <h2>
+            Abra o WhatsApp e escreva para a <em>equipe comercial.</em>
+          </h2>
+        </div>
+        <p>
+          Se preferir, pule o formulário e inicie a conversa diretamente pelo
+          canal oficial da Vértice.
+        </p>
+        <a
+          className="route-callout-link"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Abrir WhatsApp <MessageCircle size={16} />
+        </a>
+      </section>
     </SiteChrome>
   );
 }
