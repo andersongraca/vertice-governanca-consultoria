@@ -55,9 +55,9 @@ Usar links HTTPS, testar cada destino no celular e adicionar parâmetros UTM qua
 
 ### Foto de perfil e logo
 
-Usar somente o símbolo da Vértice em fundo azul-petróleo. O nome completo da empresa fica pequeno demais em uma foto circular; ele deve aparecer no campo Nome e nos materiais do Feed. Manter uma margem interna generosa para que o recorte circular não toque o símbolo.
+Usar o mesmo ativo do cabeçalho do site, disponível em `instagram-vertice/logo-instagram.png`. Ele preserva o símbolo triangular original da Vértice, com o campo claro/texturizado, o laranja da marca e o centro azul-petróleo. O arquivo anterior baseado no favicon não deve ser usado no Instagram. O nome completo da empresa fica pequeno demais em uma foto circular; ele deve aparecer no campo Nome e nos materiais do Feed. Manter uma margem interna generosa para que o recorte circular não toque o símbolo.
 
-Nos posts, aplicar o símbolo como assinatura discreta no canto inferior direito ou em uma faixa final. A paleta oficial para as artes é:
+Nos posts, aplicar o símbolo oficial como assinatura discreta no canto inferior direito ou em uma faixa final. Não recriar o desenho com outra geometria, fundo ou combinação de cores. A paleta oficial para as artes é:
 
 - azul-petróleo `#0C292D`, para confiança, decisão e fundos;
 - cobre `#D3633B`, para ação, ênfase e transição;
