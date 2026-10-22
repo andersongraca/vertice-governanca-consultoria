@@ -50,7 +50,7 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - Consultoria em TI é posicionada como guarda-chuva comercial, sem virar uma 11ª disciplina duplicada. As dez frentes são ofertas principais; as quatro capacidades complementares mostram a amplitude da especialização e do ITIL Version 5.
 - O site não oferece como serviço próprio parecer jurídico, operação de infraestrutura, desenvolvimento de software, segurança ofensiva, perícia, auditoria independente ou certificação ISO.
 - Artigos técnicos e regulatórios incluem fontes oficiais e deixam explícita a diferença entre governança técnica, orientação normativa e aconselhamento jurídico.
-- O rodapé exibe YouTube como canal em configuração, sem publicar URL inventada; o WhatsApp flutuante usa o número comercial oficial informado pelo cliente e pode ser ocultado com X.
+- O rodapé exibe o canal oficial do YouTube informado pelo cliente; o WhatsApp flutuante usa o número comercial oficial informado pelo cliente e pode ser ocultado com X.
 - O X do WhatsApp oculta o botão apenas durante a sessão atual; um novo carregamento do site o exibe novamente. O ícone do WhatsApp também aparece junto aos canais do rodapé.
 - A Home destaca uma seção de conformidade de dados para Portugal, Angola, Moçambique e Cabo Verde, conectada ao mapa comparativo da rota `/protecao-dados`.
 
