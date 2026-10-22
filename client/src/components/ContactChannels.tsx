@@ -11,7 +11,8 @@ import {
 export const CONTACT_EMAIL = "";
 export const INSTAGRAM_URL = "";
 export const LINKEDIN_URL = "";
-export const YOUTUBE_URL = "";
+export const YOUTUBE_URL =
+  "https://www.youtube.com/@V%C3%89RTICECONSULTORIAEGOVERNAN%C3%87AE";
 export const WHATSAPP_URL = "https://wa.me/557998843863";
 
 const channels = [
