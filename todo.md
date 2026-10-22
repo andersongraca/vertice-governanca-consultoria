@@ -207,3 +207,11 @@
 - [x] Reutilizar os canais oficiais já configurados, preservando ícones pendentes sem criar URLs.
 - [x] Manter o visual dos cards, tipografia e estrutura geral; alterar apenas o pequeno grupo de ícones.
 - [x] Validar e republicar a Home no GitHub Pages.
+
+
+## Ajuste — Ícones na fronteira do cabeçalho
+
+- [x] Retirar os ícones do lado de “Consultoria em TI · Governança · Gestão”.
+- [x] Posicionar os ícones na área da foto, abaixo do cabeçalho e do botão “Diagnóstico executivo”.
+- [x] Preservar a foto, a logo, a tipografia e o visual original da Home.
+- [ ] Validar e republicar o reposicionamento no GitHub Pages.

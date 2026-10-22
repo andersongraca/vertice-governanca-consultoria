@@ -152,11 +152,9 @@ export default function Home() {
         <section id="inicio" className="hero-section">
           <div className="hero-art" style={{ backgroundImage: `url(${HERO_URL})` }} aria-hidden="true" />
           <div className="hero-grid" aria-hidden="true" />
+          <div className="hero-social-corner"><ContactChannels compact onlySocial /></div>
           <div className="hero-content">
-            <div className="hero-eyebrow-row">
-              <div className="eyebrow hero-eyebrow"><span /> Consultoria em TI · Governança · Gestão</div>
-              <ContactChannels compact onlySocial />
-            </div>
+            <div className="eyebrow hero-eyebrow"><span /> Consultoria em TI · Governança · Gestão</div>
             <h1>Decisões melhores.<br /><em>Execução sob controle.</em></h1>
             <p>
               Conectamos estratégia, tecnologia, serviços, riscos e portfólios críticos para que a liderança avance com direção, visibilidade e ritmo de execução.
