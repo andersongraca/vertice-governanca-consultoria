@@ -31,8 +31,9 @@ A área de Blog será editorial, com conteúdos iniciais relacionados a essas fr
 - `client/src/pages/Blog.tsx`: hub editorial em `/blog`, com artigo em destaque, filtros de categoria e cards de artigos.
 - `client/src/pages/BlogPost.tsx`: rota `/blog/:slug`, com leitura individual, índice visual, blocos editoriais e links para outros artigos/diagnóstico.
 - `client/src/pages/ProtecaoDados.tsx`: página `/protecao-dados` com mapa comparativo de jurisdições, aviso de limites profissionais, fontes oficiais e CTA para diagnóstico técnico.
+- `client/src/lib/grcContent.ts` e `client/src/pages/Grc.tsx`: camada comercial de GRC aplicado à TI, com pilares de Governança, Riscos e Conformidade, ciclo de atuação, referências metodológicas, entregáveis, dez frentes integradas e limites profissionais.
 - `client/src/pages/EditorialPanel.tsx` e `client/src/lib/editorialDrafts.ts`: área editorial em modo de preparação, com rascunhos locais, edição, prévia e avisos explícitos de que login, banco e publicação pública serão conectados em etapa posterior.
-- `client/src/components/SiteChrome.tsx` e `client/src/pages/Home.tsx`: navegação atualizada para Serviços, Blog e Proteção de Dados, mantendo o acesso às páginas existentes.
+- `client/src/components/SiteChrome.tsx` e `client/src/pages/Home.tsx`: navegação atualizada para GRC, Serviços, Blog e Proteção de Dados, mantendo o acesso às páginas existentes e um destaque de GRC na Home.
 - `client/src/App.tsx`: manifestação das novas rotas estáticas e da rota dinâmica de artigos.
 - `client/public/manus-routes.json`: declaração de rotas públicas para a camada de publicação/descoberta.
 - `client/public/sitemap.xml` e `client/public/robots.txt`: documentos básicos de descoberta para a publicação no domínio GitHub Pages.
@@ -75,6 +76,7 @@ O site já possui o movimento visual **Horizonte de Controle**, portanto a nova 
 - `/blog` — hub editorial.
 - `/blog/:slug` — artigo individual.
 - `/protecao-dados` — mapa comparativo de proteção de dados lusófona.
+- `/grc` — Governança, Riscos e Conformidade aplicados à Tecnologia da Informação.
 - `/painel-editorial` — área de preparação de rascunhos, fora do sitemap e impedida de indexação enquanto não há autenticação e backend publicados.
 - `/metodo`, `/socios`, `/diagnostico`, `/privacidade` — páginas existentes preservadas.
 

@@ -40,6 +40,7 @@ type Inquiry = {
 
 const navItems = [
   { label: "Serviços", href: "/servicos" },
+  { label: "GRC", href: "/grc" },
   { label: "Blog", href: "/blog" },
   { label: "Privacidade", href: "/protecao-dados" },
   { label: "Método", href: "/metodo" },
@@ -254,6 +255,25 @@ export default function Home() {
           <div className="lusophone-home-footer">
             <p>Organizamos inventário, fluxos, papéis, contratos, transferências, incidentes e evidências para que a decisão jurídica aconteça sobre fatos visíveis.</p>
             <Link className="primary-cta" href="/protecao-dados">Conhecer a trilha lusófona <ArrowRight size={17} /></Link>
+          </div>
+        </section>
+
+        <section className="home-grc-section">
+          <div className="home-grc-copy">
+            <div className="eyebrow"><span /> GRC aplicado à TI</div>
+            <h2>Governança, riscos e conformidade <em>na mesma conversa.</em></h2>
+            <p>
+              Organizamos decisões, controles, requisitos e evidências para que a
+              tecnologia avance com responsabilidade — da estratégia à rotina.
+            </p>
+            <Link className="primary-cta" href="/grc">Conhecer a arquitetura GRC <ArrowRight size={17} /></Link>
+          </div>
+          <div className="home-grc-map" aria-label="Os três eixos do GRC">
+            <article><span>G</span><strong>Governança</strong><small>Decisão e direção</small></article>
+            <i />
+            <article><span>R</span><strong>Riscos</strong><small>Tratamento e continuidade</small></article>
+            <i />
+            <article><span>C</span><strong>Conformidade</strong><small>Controle e evidência</small></article>
           </div>
         </section>
 

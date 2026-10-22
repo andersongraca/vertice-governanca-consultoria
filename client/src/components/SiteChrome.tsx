@@ -10,6 +10,7 @@ const LOGO_URL = BRAND_ASSETS.logo;
 
 const navigation = [
   { label: "Serviços", href: "/servicos", key: "servicos" },
+  { label: "GRC", href: "/grc", key: "grc" },
   { label: "Blog", href: "/blog", key: "blog" },
   { label: "Privacidade", href: "/protecao-dados", key: "privacidade-dados" },
   { label: "Método", href: "/metodo", key: "metodo" },

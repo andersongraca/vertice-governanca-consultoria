@@ -189,3 +189,13 @@
 - [x] Separar o que já está explícito, o que está implícito e o que deve permanecer como limite ou parceria.
 - [x] Registrar a avaliação completa em `avaliacao-grc-governanca-ti-unicamp.md`.
 - [ ] Se aprovado, criar a página “GRC aplicado à TI” e a seção “Métodos e referências” sem transformar as disciplinas em 17 serviços independentes.
+
+
+## Entrega — GRC aplicado à TI
+
+- [x] Criar uma página pública “GRC aplicado à TI” com Governança, Riscos e Conformidade como eixos integrados.
+- [x] Explicar o ciclo de atuação: contexto, decisão, risco, controle, evidência e melhoria.
+- [x] Organizar COBIT, ITIL Version 5, ISO/IEC 27001/27701/42001, BPMN, DMBoK, TOGAF, COSO, PMBoK, métodos ágeis, KPIs/OKRs, Lean, Seis Sigma, Design Thinking e Lean Inception como referências, sem apresentá-las como novas certificações.
+- [x] Conectar as dez frentes comerciais e manter os limites jurídicos, de certificação, operação e segurança ofensiva.
+- [x] Adicionar acesso à página no cabeçalho, na Home, no manifesto de rotas e no sitemap.
+- [ ] Validar, versionar e publicar a nova página no GitHub Pages.

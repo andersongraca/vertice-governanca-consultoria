@@ -10,7 +10,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Contato from "@/pages/Contato";
 import Diagnostico from "@/pages/Diagnostico";
-import EditorialPanel from "@/pages/EditorialPanel";
+import EditorialPanel from "./pages/EditorialPanel";
+import Grc from "./pages/Grc";
 import Home from "./pages/Home";
 import Metodo from "./pages/Metodo";
 import Privacidade from "./pages/Privacidade";
@@ -25,6 +26,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/servicos" component={Services} />
+      <Route path="/grc" component={Grc} />
       <Route path="/atuacao" component={Atuacao} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/blog" component={Blog} />

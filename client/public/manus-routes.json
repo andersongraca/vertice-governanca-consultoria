@@ -2,6 +2,7 @@
   "routes": [
     { "path": "/", "title": "Vértice Consultoria em TI, Governança e Gestão" },
     { "path": "/servicos", "title": "Consultoria em TI e Serviços | Vértice" },
+    { "path": "/grc", "title": "GRC aplicado à TI | Vértice" },
     { "path": "/atuacao", "title": "Consultoria em TI e Serviços | Vértice" },
     { "path": "/blog", "title": "Blog | Vértice Consultoria em TI" },
     { "path": "/blog/:slug", "title": "Artigo | Vértice Consultoria em TI" },
