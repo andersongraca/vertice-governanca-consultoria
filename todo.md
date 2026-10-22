@@ -181,3 +181,11 @@
 
 - [x] Substituir o placeholder do YouTube pelo canal oficial informado pelo cliente.
 - [x] Validar o build e publicar a atualização no GitHub Pages.
+
+
+## Avaliação — GRC e especialização Unicamp
+
+- [x] Confrontar o site atual com as 17 disciplinas e o TCC da especialização oficial da Unicamp.
+- [x] Separar o que já está explícito, o que está implícito e o que deve permanecer como limite ou parceria.
+- [x] Registrar a avaliação completa em `avaliacao-grc-governanca-ti-unicamp.md`.
+- [ ] Se aprovado, criar a página “GRC aplicado à TI” e a seção “Métodos e referências” sem transformar as disciplinas em 17 serviços independentes.
