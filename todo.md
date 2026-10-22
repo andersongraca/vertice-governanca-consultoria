@@ -198,4 +198,4 @@
 - [x] Organizar COBIT, ITIL Version 5, ISO/IEC 27001/27701/42001, BPMN, DMBoK, TOGAF, COSO, PMBoK, métodos ágeis, KPIs/OKRs, Lean, Seis Sigma, Design Thinking e Lean Inception como referências, sem apresentá-las como novas certificações.
 - [x] Conectar as dez frentes comerciais e manter os limites jurídicos, de certificação, operação e segurança ofensiva.
 - [x] Adicionar acesso à página no cabeçalho, na Home, no manifesto de rotas e no sitemap.
-- [ ] Validar, versionar e publicar a nova página no GitHub Pages.
+- [x] Validar, versionar e publicar a nova página no GitHub Pages.
