@@ -214,4 +214,4 @@
 - [x] Retirar os ícones do lado de “Consultoria em TI · Governança · Gestão”.
 - [x] Posicionar os ícones na área da foto, abaixo do cabeçalho e do botão “Diagnóstico executivo”.
 - [x] Preservar a foto, a logo, a tipografia e o visual original da Home.
-- [ ] Validar e republicar o reposicionamento no GitHub Pages.
+- [x] Validar e republicar o reposicionamento no GitHub Pages.
