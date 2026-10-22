@@ -199,3 +199,11 @@
 - [x] Conectar as dez frentes comerciais e manter os limites jurídicos, de certificação, operação e segurança ofensiva.
 - [x] Adicionar acesso à página no cabeçalho, na Home, no manifesto de rotas e no sitemap.
 - [x] Validar, versionar e publicar a nova página no GitHub Pages.
+
+
+## Ajuste — Ícones sociais no hero da Home
+
+- [x] Adicionar somente os ícones das redes sociais ao lado de “Consultoria em TI · Governança · Gestão”.
+- [x] Reutilizar os canais oficiais já configurados, preservando ícones pendentes sem criar URLs.
+- [x] Manter o visual dos cards, tipografia e estrutura geral; alterar apenas o pequeno grupo de ícones.
+- [ ] Validar e republicar a Home no GitHub Pages.

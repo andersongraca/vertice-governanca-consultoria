@@ -23,13 +23,25 @@ const channels = [
   { label: "WhatsApp", href: WHATSAPP_URL, icon: MessageCircle },
 ];
 
-export function ContactChannels() {
+type ContactChannelsProps = {
+  compact?: boolean;
+  onlySocial?: boolean;
+};
+
+export function ContactChannels({
+  compact = false,
+  onlySocial = false,
+}: ContactChannelsProps = {}) {
+  const visibleChannels = onlySocial
+    ? channels.filter(channel => channel.label !== "E-mail")
+    : channels;
+
   return (
     <div
-      className="contact-channels"
+      className={`contact-channels${compact ? " contact-channels-compact" : ""}`}
       aria-label="Canais de contato e redes sociais"
     >
-      {channels.map(({ label, href, icon: Icon }) =>
+      {visibleChannels.map(({ label, href, icon: Icon }) =>
         href ? (
           <a
             key={label}

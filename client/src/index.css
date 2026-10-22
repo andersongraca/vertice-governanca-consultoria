@@ -1245,3 +1245,14 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
 
 .grc-inline-link { color: var(--copper); font-weight: 800; text-decoration: underline; text-decoration-color: rgba(211,99,59,.45); text-underline-offset: 3px; }
 .grc-inline-link:hover { color: var(--ink); text-decoration-color: var(--ink); }
+
+.hero-eyebrow-row { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-bottom: 24px; }
+.hero-eyebrow-row .hero-eyebrow { margin-bottom: 0; }
+.contact-channels-compact { flex: 0 0 auto; gap: 7px; }
+.contact-channels-compact .contact-channel { width: 24px; height: 24px; border: 0; color: rgba(244,241,233,.64); }
+.contact-channels-compact .contact-channel:hover { background: transparent; border-color: transparent; color: var(--copper-pale); transform: translateY(-1px); }
+.contact-channels-compact .contact-channel.is-pending { border: 0; color: rgba(244,241,233,.4); opacity: 1; cursor: default; }
+@media (max-width: 580px) {
+  .hero-eyebrow-row { align-items: flex-start; flex-wrap: wrap; gap: 13px; }
+  .contact-channels-compact { width: 100%; }
+}
