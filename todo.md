@@ -206,4 +206,4 @@
 - [x] Adicionar somente os ícones das redes sociais ao lado de “Consultoria em TI · Governança · Gestão”.
 - [x] Reutilizar os canais oficiais já configurados, preservando ícones pendentes sem criar URLs.
 - [x] Manter o visual dos cards, tipografia e estrutura geral; alterar apenas o pequeno grupo de ícones.
-- [ ] Validar e republicar a Home no GitHub Pages.
+- [x] Validar e republicar a Home no GitHub Pages.
