@@ -9,7 +9,8 @@ import {
 
 // Preencha estes valores quando a Vértice definir os canais comerciais oficiais.
 export const CONTACT_EMAIL = "";
-export const INSTAGRAM_URL = "";
+export const INSTAGRAM_URL =
+  "https://www.instagram.com/vertice.governanca?vrfl=MWJrNHViNm9jOG5ncQ%3D%3D";
 export const LINKEDIN_URL = "";
 export const YOUTUBE_URL =
   "https://www.youtube.com/channel/UCfNpto1yRWHyrU9jdOW9vmg";

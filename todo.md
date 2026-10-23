@@ -215,3 +215,10 @@
 - [x] Posicionar os ícones na área da foto, abaixo do cabeçalho e do botão “Diagnóstico executivo”.
 - [x] Preservar a foto, a logo, a tipografia e o visual original da Home.
 - [x] Validar e republicar o reposicionamento no GitHub Pages.
+
+
+## Ajuste — Instagram oficial
+
+- [x] Configurar o ícone do Instagram com o endereço oficial informado pelo cliente.
+- [x] Preservar o mesmo comportamento de abertura em nova aba e o visual existente.
+- [ ] Validar e publicar a atualização no GitHub Pages.
