@@ -221,4 +221,4 @@
 
 - [x] Configurar o ícone do Instagram com o endereço oficial informado pelo cliente.
 - [x] Preservar o mesmo comportamento de abertura em nova aba e o visual existente.
-- [ ] Validar e publicar a atualização no GitHub Pages.
+- [x] Validar e publicar a atualização no GitHub Pages.
