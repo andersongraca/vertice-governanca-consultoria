@@ -230,4 +230,4 @@
 - [x] Exibir públicos, objetivos, conteúdo, exercícios, materiais, formatos e duração indicativa, sem promessas de cursos oficiais, certificação ou garantia de conformidade.
 - [x] Adicionar apenas o novo link na navegação da Home e na global; preservar fotos, logo, ícones e demais páginas. Não aplicar novos retratos no site conforme orientação final.
 - [x] Conectar CTAs ao WhatsApp oficial e ao contato existente sem criar novo formulário.
-- [ ] Atualizar manifesto, sitemap e HTML indexável da nova página; validar, revisar e publicar preservando as rotas existentes.
+- [x] Atualizar manifesto, sitemap e HTML indexável da nova página; validar, revisar e publicar preservando as rotas existentes.
