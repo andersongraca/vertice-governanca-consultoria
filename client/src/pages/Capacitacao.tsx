@@ -133,8 +133,8 @@ export default function Capacitacao() {
               decoding="async"
             />
             <figcaption>
-              Composição editada a partir das fotos enviadas; não representa o
-              registro de um evento ou treinamento real.
+              Know-how em governança e tecnologia, compartilhado em capacitações
+              corporativas.
             </figcaption>
           </figure>
           <div className="training-team-copy">
