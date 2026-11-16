@@ -40,6 +40,7 @@ type Inquiry = {
 
 const navItems = [
   { label: "Serviços", href: "/servicos" },
+  { label: "Capacitação", href: "/capacitacao" },
   { label: "GRC", href: "/grc" },
   { label: "Blog", href: "/blog" },
   { label: "Privacidade", href: "/protecao-dados" },

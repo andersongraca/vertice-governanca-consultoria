@@ -83,3 +83,13 @@ O site já possui o movimento visual **Horizonte de Controle**, portanto a nova 
 ## Entrega e publicação
 
 A implementação será validada com `pnpm check` e `pnpm build`. Depois, as alterações serão commitadas no branch `main`, enviadas ao repositório GitHub selecionado e a saída de produção será sincronizada no branch `gh-pages`, que atende ao endereço público informado. A etapa seguinte, quando autorizada, conecta a área editorial a servidor, banco, autenticação e permissões reais.
+
+## Extensão aprovada — Aba Capacitação
+
+Criar somente a aba **Capacitação** em `/capacitacao`, com link entre Serviços e GRC nas duas navegações existentes. A página apresenta workshops e programas corporativos em Governança de TI/GRC, ITIL Version 5, governança responsável de IA, LGPD, proteção de dados lusófona e segurança/privacidade com ISO/IEC 27001 e 27701. A LGPD tem trilha própria, com aplicação para colaboradores, gestores e equipes técnicas. Brasil deve aparecer junto a Portugal, Angola, Moçambique e Cabo Verde.
+
+O catálogo fica em `client/src/lib/trainingContent.ts`; a página em `client/src/pages/Capacitacao.tsx`; os estilos específicos em `client/src/styles/capacitacao.css`. Detalhes das trilhas por abas com navegação de teclado. CTAs abrem o WhatsApp oficial com mensagem de interesse revisável ou o contato existente. Não criar novo formulário nem alterar o diagnóstico por e-mail.
+
+Preservar Horizonte de Controle, a tipografia e as cores existentes. Por orientação final do usuário, não aplicar novos retratos nem trocar foto, logo, hero, ícones ou estrutura da Home/Quem somos. A composição de retratos previamente solicitada fica como arquivo separado, não integrada ao site. A Home recebe apenas o novo link de navegação.
+
+Durações indicativas e condições acordadas com o cliente; sem inventar turmas, agenda, preços ou resultados. Capacitação técnica e gerencial não é treinamento oficial/acreditado ITIL/ISO, certificação profissional, garantia de conformidade ou aconselhamento jurídico. Exercícios usam casos fictícios ou anonimizados. Atualizar manifesto, sitemap e gerar HTML indexável específico da nova página no artefato do GitHub Pages, preservando as rotas existentes.

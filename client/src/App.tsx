@@ -8,6 +8,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Atuacao from "./pages/Atuacao";
 import Blog from "./pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import Capacitacao from "./pages/Capacitacao";
+import "./styles/capacitacao.css";
 import Contato from "@/pages/Contato";
 import Diagnostico from "@/pages/Diagnostico";
 import EditorialPanel from "./pages/EditorialPanel";
@@ -26,6 +28,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/servicos" component={Services} />
+      <Route path="/capacitacao" component={Capacitacao} />
       <Route path="/grc" component={Grc} />
       <Route path="/atuacao" component={Atuacao} />
       <Route path="/blog/:slug" component={BlogPost} />
