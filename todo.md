@@ -228,6 +228,7 @@
 - [x] Criar a aba `/capacitacao` com trilhas de LGPD, Governança/GRC, ITIL Version 5, IA/ISO 42001, privacidade lusófona e segurança/privacidade ISO 27001/27701.
 - [x] Incluir LGPD para colaboradores, gestores e equipes técnicas, além de Brasil, Portugal, Angola, Moçambique e Cabo Verde, sem homogeneizar obrigações.
 - [x] Exibir públicos, objetivos, conteúdo, exercícios, materiais, formatos e duração indicativa, sem promessas de cursos oficiais, certificação ou garantia de conformidade.
-- [x] Adicionar apenas o novo link na navegação da Home e na global; preservar fotos, logo, ícones e demais páginas. Não aplicar novos retratos no site conforme orientação final.
+- [x] Adicionar apenas o novo link na navegação da Home e na global; preservar fotos, logo, ícones e demais páginas.
+- [x] Incluir a composição editada dos sócios somente na página Capacitação, com gravatas em cobre e legenda informando que não é registro de evento real.
 - [x] Conectar CTAs ao WhatsApp oficial e ao contato existente sem criar novo formulário.
 - [x] Atualizar manifesto, sitemap e HTML indexável da nova página; validar, revisar e publicar preservando as rotas existentes.

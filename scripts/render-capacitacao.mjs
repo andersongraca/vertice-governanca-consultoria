@@ -12,6 +12,7 @@ const appBase = "/vertice-governanca-consultoria";
 const route = "/capacitacao/";
 const vite = await createServer({
   configFile: path.join(project, "vite.config.ts"),
+  base: `${appBase}/`,
   server: { middlewareMode: true, hmr: false },
   appType: "custom",
 });

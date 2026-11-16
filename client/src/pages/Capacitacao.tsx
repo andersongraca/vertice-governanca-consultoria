@@ -22,6 +22,7 @@ export const trainingPageTitle =
   "Treinamentos e Capacitação em TI e LGPD | Vértice";
 export const trainingPageDescription =
   "Capacitação corporativa em LGPD, governança de TI, GRC, ITIL Version 5, IA e privacidade lusófona. Workshops aplicados e programas sob medida para equipes.";
+const foundersPortrait = `${import.meta.env.BASE_URL}images/vertice-fundadores-capacitacao.webp`;
 
 function whatsappInterest(topic: string) {
   const message = `Olá, Vértice. Gostaria de conversar sobre capacitação corporativa em ${topic}. Podemos alinhar o público, os objetivos, o formato e o escopo?`;
@@ -116,6 +117,55 @@ export default function Capacitacao() {
               Para empresas e equipes · Escopo sob medida
             </div>
           </aside>
+        </section>
+
+        <section
+          className="training-team-section"
+          aria-labelledby="training-team-title"
+        >
+          <figure className="training-team-portrait">
+            <img
+              src={foundersPortrait}
+              alt="Retrato composto dos sócios da Vértice, Me. Anderson Graça e Me. Márcio Costa, em trajes corporativos e gravatas na cor cobre da marca."
+              width="2176"
+              height="1632"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              Composição editada a partir das fotos enviadas; não representa o
+              registro de um evento ou treinamento real.
+            </figcaption>
+          </figure>
+          <div className="training-team-copy">
+            <div className="eyebrow">
+              <span /> Quem conduz a Vértice
+            </div>
+            <h2 id="training-team-title">
+              Experiência técnica
+              <br />
+              <em>a serviço da aprendizagem.</em>
+            </h2>
+            <p>
+              Os sócios da Vértice reúnem atuação complementar em Governança de
+              TI, estratégia, projetos e gestão. Nas capacitações, o objetivo é
+              tornar o conhecimento compreensível e conectá-lo às decisões e
+              situações do cotidiano das equipes.
+            </p>
+            <div className="training-team-names">
+              <div>
+                <strong>Me. Anderson Graça</strong>
+                <span>Governança de TI &amp; Estratégia</span>
+              </div>
+              <div>
+                <strong>Me. Márcio Costa</strong>
+                <span>Projetos &amp; Governança</span>
+              </div>
+            </div>
+            <Link className="training-text-link" href="/socios">
+              Conhecer quem conduz <ArrowRight size={15} />
+            </Link>
+          </div>
         </section>
 
         <section id="trilhas" className="training-section">
