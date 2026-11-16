@@ -78,7 +78,7 @@ try {
   }
   const target = path.join(project, "dist/public/capacitacao/index.html");
   await fs.mkdir(path.dirname(target), { recursive: true });
-  await fs.writeFile(target, html);
+  await fs.writeFile(target, html.replace(/[ \t]+$/gm, ""));
   console.log(
     `Capacitação: HTML estático com conteúdo e metadados gravado em ${target}`
   );
